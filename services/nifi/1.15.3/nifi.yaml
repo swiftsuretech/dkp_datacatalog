@@ -12,7 +12,7 @@ spec:
         kind: HelmRepository
         name: nifikop
         namespace: ${releaseNamespace} 
-      version: "v0.14.0-release"
+      version: "0.14.0"
   interval: 15s
   install:
     remediation:
@@ -21,7 +21,6 @@ spec:
   upgrade:
     remediation:
       retries: 30
-  releaseName: v0.14.0-release
   valuesFrom:
     - kind: ConfigMap
       name: nifikop-defaults
