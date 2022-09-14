@@ -21,7 +21,7 @@ spec:
   upgrade:
     remediation:
       retries: 30
-  releaseName: nifi
+  releaseName: nifikop
   valuesFrom:
     - kind: ConfigMap
       name: nifikop-defaults
