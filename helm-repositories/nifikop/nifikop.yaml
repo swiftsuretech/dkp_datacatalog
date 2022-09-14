@@ -8,4 +8,4 @@ spec:
   type: oci
   interval: 1m
   timeout: 1m
-  url: "${helmMirrorURL:=oci://ghcr.io/konpyutaika/helm-charts/nifikop}"
+  url: "${helmMirrorURL:=https://github.com/orgs/konpyutaika/packages/container/package/helm-charts%2Fnifikop}"
