@@ -7,4 +7,4 @@ metadata:
 spec:
   interval: 10m
   timeout: 1m
-  url: "${helmMirrorURL:=https://github.com/konpyutaika/nifikop/tree/master/helm/nifikop}"
+  url: "${helmMirrorURL:=oci://ghcr.io/konpyutaika/helm-charts/nifikop}"
