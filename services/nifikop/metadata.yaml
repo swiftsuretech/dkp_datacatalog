@@ -1,5 +1,5 @@
 displayName: Apache NiFi
-description: Nifi is a distributed, data streaming platform.
+description: A distributed, data streaming platform.
 category:
   - Data
 type: catalog
