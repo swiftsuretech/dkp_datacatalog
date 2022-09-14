@@ -1,0 +1,15 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  labels:
+    app.kubernetes.io/managed-by: Helm
+  name: removehost
+  namespace: nifi
+  annotations:
+    app.kubernetes.io/managed-by: Helm
+    meta.helm.sh/release-namespace: nifi
+    meta.helm.sh/release-name: nifi
+spec:
+  headers:
+    customRequestHeaders:
+      host: ""

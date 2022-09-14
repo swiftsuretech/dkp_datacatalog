@@ -1,4 +1,5 @@
- # <img src="./images/d2iq.png" alt="alt text" width="30"/><img src="./images/nifi.png" alt="alt text" width="30"/> Apache NiFi in DKP
+ <img src="./images/d2iq.png" alt="alt text" width="50"/><img src="./images/nifi.png" alt="alt text" width="50"/>
+ # Apache NiFi in DKP
 
 ## Scope
 

@@ -1,0 +1,9 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: stripprefixes-keycloak
+  namespace: nifi
+spec:
+  stripPrefix:
+    prefixes:
+    - /keycloak
