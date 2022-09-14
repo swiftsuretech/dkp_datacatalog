@@ -3,9 +3,9 @@ apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
   name: nifikop
-  namespace: ${releaseNamespace}
+  namespace: nifi-test-hnk9l
 spec:
   type: oci
   interval: 1m
   timeout: 1m
-  url: "${helmMirrorURL:=oci://ghcr.io/konpyutaika/helm-charts/nifikop}"
+  url: oci://ghcr.io/konpyutaika/helm-charts/nifikop
