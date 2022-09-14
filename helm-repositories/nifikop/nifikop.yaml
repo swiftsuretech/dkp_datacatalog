@@ -5,6 +5,7 @@ metadata:
   name: nifikop
   namespace: ${releaseNamespace}
 spec:
+  type: "oci"
   interval: 1m
   timeout: 1m
   url: "${helmMirrorURL:=https://github.com/konpyutaika/nifikop/tree/master/helm/nifikop}"
