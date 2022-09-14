@@ -7,7 +7,7 @@ metadata:
 spec:
   chart:
     spec:
-      chart: nifikop
+      chart: ./helm/nifikop
       version: '0.14.0'
       sourceRef:
         kind: GitRepository
