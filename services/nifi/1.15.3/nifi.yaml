@@ -12,7 +12,7 @@ spec:
         kind: HelmRepository
         name: nifikop
         namespace: ${releaseNamespace} 
-      version: 0.14.0
+      version: v0.14.0-release
   interval: 15s
   install:
     remediation:
