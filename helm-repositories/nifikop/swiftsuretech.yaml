@@ -1,0 +1,10 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: swiftsuretech
+  namespace: nifi-test-hnk9l
+spec:
+  interval: 1m
+  timeout: 1m
+  url: https://github.com/swiftsuretech/nifikop
