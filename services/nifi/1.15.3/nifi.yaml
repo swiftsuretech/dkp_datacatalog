@@ -21,7 +21,7 @@ spec:
   upgrade:
     remediation:
       retries: 30
-  # valuesFrom:
-  #  - kind: ConfigMap
-  #    name: nifikop-defaults
+  valuesFrom:
+   - kind: ConfigMap
+     name: nifikop-defaults
   targetNamespace: nifi-test-hnk9l 
