@@ -10,8 +10,8 @@ spec:
       chart: nifikop
       version: '0.14.0'
       sourceRef:
-        kind: HelmRepository
-        name: nifikop
+        kind: GitRepository
+        name: swiftsuretech
         namespace: nifi-test-hnk9l 
   interval: 15s
   install:
