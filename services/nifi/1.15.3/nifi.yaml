@@ -3,17 +3,17 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: nifi
-  namespace: nifi-test-hnk9l
+  namespace: ${releaseNamespace}
 spec:
   chart:
     spec:
       chart: nifikop
+      version: '0.14.0'
       sourceRef:
         kind: HelmRepository
         name: nifikop
-        namespace: nifi-test-hnk9l 
-      version: 0.14.0
-  interval: 15s
+        namespace: ${releaseNamespace} 
+    interval: 15s
   install:
     remediation:
       retries: 30
