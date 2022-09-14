@@ -6,6 +6,7 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.9.0
   creationTimestamp: null
   name: nifiregistryclients.nifi.konpyutaika.com
+  namespace: nifi-test-hnk9l
 spec:
   group: nifi.konpyutaika.com
   names:
