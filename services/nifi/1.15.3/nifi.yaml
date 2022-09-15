@@ -3,7 +3,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: nifi
-  namespace: nifi
+  namespace: nifi-h28s4
 spec:
   chart:
     spec:
@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: GitRepository
         name: swiftsuretech
-        namespace: nifi
+        namespace: nifi-h28s4
   interval: 15s
   install:
     remediation:
@@ -21,7 +21,7 @@ spec:
   upgrade:
     remediation:
       retries: 30
-  targetNamespace: nifi
+  targetNamespace: nifi-h28s4
   valuesFrom:
   - kind: ConfigMap
     name: nifikop-defaults

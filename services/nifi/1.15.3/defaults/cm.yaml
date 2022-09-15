@@ -3,7 +3,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: nifikop-defaults
-  namespace: nifi
+  namespace: nifi-h28s4
 data:
   values.yaml: |-
     ## NiFi Operator Image
