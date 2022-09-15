@@ -8,7 +8,7 @@ spec:
   chart:
     spec:
       chart: zookeeper
-      version: 10.1.5
+      version: latest
       sourceRef:
         kind: HelmRepository
         name: swiftsuretech
