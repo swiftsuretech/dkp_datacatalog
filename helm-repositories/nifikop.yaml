@@ -1,0 +1,10 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: nifikop
+  namespace: ${releaseNamespace}
+spec:
+  type: oci
+  interval: 1m0s
+  url: oci://ghcr.io/konpyutaika/helm-charts/nifikop
