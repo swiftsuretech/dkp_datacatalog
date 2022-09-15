@@ -7,7 +7,7 @@ dependencies:
   repository: https://charts.bitnami.com/bitnami
   tags:
   - bitnami-common
-  version: 3.x.x
+  version: 2.x.x
 description: Apache ZooKeeper provides a reliable, centralized register of configuration
   data and services for distributed applications.
 home: https://github.com/bitnami/charts/tree/master/bitnami/zookeeper
