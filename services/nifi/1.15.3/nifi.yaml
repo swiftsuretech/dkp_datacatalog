@@ -8,11 +8,11 @@ spec:
   chart:
     spec:
       chart: nifikop
-      version: 0.14.0-release
+      version: 0.14.0
       sourceRef:
-        kind: GitRepository
+        kind: HelmRepository
         name: swiftsuretech
-        namespace: nifi-test-hnk9l 
+        namespace: nifi
   interval: 15s
   install:
     remediation:
@@ -24,4 +24,4 @@ spec:
   valuesFrom:
    - kind: ConfigMap
      name: nifikop-defaults
-  targetNamespace: nifi-test-hnk9l 
+  targetNamespace: nifi
