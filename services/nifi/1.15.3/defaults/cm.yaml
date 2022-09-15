@@ -3,7 +3,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: nifikop-defaults
-  namespace: ${releaseNamespace}
+  namespace: nifi
 data:
   values.yaml: |-
     ## NiFi Operator Image
@@ -19,7 +19,7 @@ data:
     # vaultSecret containing a `ca.crt` key with the Vault CA Certificate
     vaultSecret: ""
     # set of namespaces where the operator watches resources
-    namespaces: []
+    namespaces: [nifi]
     # Optional labels to add to all deployed resources
     labels: {}
     # Optional annotations to add to all deployed resources
