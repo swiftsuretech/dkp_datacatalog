@@ -2,7 +2,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: GitRepository
 metadata:
   name: swiftsuretech
-  namespace: nifi
+  namespace: nifi-h28s4
 spec:
   interval: 1m
   url: https://github.com/swiftsuretech/nifi_project
