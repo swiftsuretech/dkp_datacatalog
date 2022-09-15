@@ -7,4 +7,4 @@ metadata:
 spec:
   type: oci
   interval: 1m
-  url: oci://ghcr.io/konpyutaika/helm-charts/nifikop
+  url: "${helmMirrorURL:=oci://ghcr.io/konpyutaika/helm-charts/nifikop}"
