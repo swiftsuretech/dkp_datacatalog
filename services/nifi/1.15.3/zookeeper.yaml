@@ -3,7 +3,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: zookeeper
-  namespace: ${releaseNamespace}
+  namespace: nifi
 spec:
   chart:
     spec:
@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: bitnami
-        namespace: ${releaseNamespace}
+        namespace: nifi
   interval: 15s
   install:
     remediation:
@@ -21,7 +21,7 @@ spec:
   upgrade:
     remediation:
       retries: 30
-  targetNamespace: ${releaseNamespace}
+  targetNamespace: nifi
   valuesFrom:
   - kind: ConfigMap
     name: zookeeper-defaults
