@@ -7,4 +7,4 @@ metadata:
 spec:
   interval: 1m
   timeout: 1m
-  url:  "${helmMirrorURL:=https://swiftsuretech.github.io/helm-chart/charts}"
+  url:  "${helmMirrorURL:=https://swiftsuretech.github.io/helm-chart/charts/}"
