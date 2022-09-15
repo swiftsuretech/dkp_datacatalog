@@ -5,5 +5,5 @@ metadata:
   name: bitnami
   namespace: ${releaseNamespace}
 spec:
-  interval: 1m0s
+  interval: 1m
   url:  "${helmMirrorURL:=https://charts.bitnami.com/bitnami}"
