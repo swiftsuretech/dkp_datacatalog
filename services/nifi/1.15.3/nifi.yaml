@@ -3,7 +3,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: nifi
-  namespace: nifi
+  namespace: ${releaseNamespace}
 spec:
   chart:
     spec:
@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: swiftsuretech
-        namespace: nifi
+        namespace: ${releaseNamespace}
   interval: 15s
   install:
     remediation:
@@ -24,4 +24,4 @@ spec:
   valuesFrom:
    - kind: ConfigMap
      name: nifikop-defaults
-  targetNamespace: nifi
+  targetNamespace: ${releaseNamespace}

@@ -3,8 +3,8 @@ apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
   name: swiftsuretech
-  namespace: nifi
+  namespace: ${releaseNamespace}
 spec:
   interval: 1m
   timeout: 1m
-  url: https://swiftsuretech.github.io/helm-chart/charts/
+  url:  "${helmMirrorURL:=https://swiftsuretech.github.io/helm-chart/charts}"
