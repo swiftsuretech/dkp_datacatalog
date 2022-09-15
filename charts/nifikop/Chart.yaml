@@ -1,0 +1,17 @@
+apiVersion: v1
+appVersion: 0.14.0-release
+description: A Helm chart for NiFiKop - the Konpyūtāika NiFi Kubernetes operator
+home: https://github.com/konpyutaika/nifikop
+keywords:
+- operator
+- nifi
+- nifikop
+- data
+maintainers:
+- email: guittonalexandre@outlook.fr
+  name: erdrix
+name: nifikop
+sources:
+- https://github.com/konpyutaika/nifikop
+version: 0.14.0
+
