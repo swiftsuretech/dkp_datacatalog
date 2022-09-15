@@ -52,7 +52,7 @@ data:
     ## If true, create serviceAccount
     ##
     serviceAccount:
-      create: true
+      create: false
 
     metrics:
       ## if true deploy service for metrics access
