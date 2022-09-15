@@ -22,3 +22,6 @@ spec:
     remediation:
       retries: 30
   targetNamespace: ${releaseNamespace}
+  valuesFrom:
+  - kind: ConfigMap
+    name: zookeeper-defaults
