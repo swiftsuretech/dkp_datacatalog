@@ -41,7 +41,7 @@ data:
     createCustomResource: false
     ## If true, create & use RBAC resources
     ##
-    rbacEnable: false
+    rbacEnable: true
     ## If true, create serviceAccount
     ##
     serviceAccount:
