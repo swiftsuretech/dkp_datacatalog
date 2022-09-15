@@ -2,13 +2,13 @@ apiVersion: nifi.konpyutaika.com/v1alpha1
 kind: NifiCluster
 metadata:
   name: nifi-demo
-  namespace: nifi
+  namespace: nifi-phbw6
 spec:
   service:
     headlessEnabled: true
     labels:
       cluster-name: nifi-demo
-  zkAddress: "nifi-zookeeper:2181"
+  zkAddress: "nifi-phbw6-zookeeper:2181"
   zkPath: /nifi-demo
   externalServices:
     - metadata:
