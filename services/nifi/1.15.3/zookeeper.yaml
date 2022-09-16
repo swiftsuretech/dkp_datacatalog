@@ -3,7 +3,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: zookeeper
-  namespace: nifi-h28s4
+  namespace: ${releaseNamespace}
 spec:
   chart:
     spec:
@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: bitnami
-        namespace: nifi-h28s4
+        namespace: ${releaseNamespace}
   interval: 15s
   install:
     remediation:
@@ -21,7 +21,7 @@ spec:
   upgrade:
     remediation:
       retries: 30
-  targetNamespace: nifi-h28s4
+  targetNamespace: ${releaseNamespace}
   valuesFrom:
   - kind: ConfigMap
     name: zookeeper-defaults
