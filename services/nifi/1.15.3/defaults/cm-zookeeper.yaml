@@ -6,4 +6,4 @@ metadata:
   namespace: ${releaseNamespace}
 data:
   values.yaml: |-
-    replicaCount: 3
+    replicaCount: 1
