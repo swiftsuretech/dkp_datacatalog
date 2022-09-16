@@ -8,7 +8,7 @@ spec:
     headlessEnabled: true
     labels:
       cluster-name: nifi-demo
-  zkAddress: "nifi-h28s4-zookeeper:2181"
+  zkAddress: "nifi-zookeeper:2181"
   zkPath: /nifi-demo
   externalServices:
     - metadata:
