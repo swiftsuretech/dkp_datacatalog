@@ -31,10 +31,20 @@ None of which are currently possible using a Stateful Set
 The controller, utilising Zookeeper, manages the cluster functions for us to offer a bare metal type NiFi cluster experience.
 ## Pre-Requisites
 
+- A healthy cluster managed by DKP. For demo purposes you can use the management cluster but as NiFi is very resource intensive, a dedicated cluster with adequate resources is required for production workloads
+- kubectl installed on local machine
 
 ## Installation
 
+- Clone this repo onto your local machine
 
+    ```bash
+    git clone https://github.com/swiftsuretech/nifi_project.git
+    ```
+
+- Set up a new project in DKP:
+
+    <img src="./images/start_project.gif" width="600" align="center">
 ## Configuration
 
 
