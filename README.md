@@ -42,9 +42,53 @@ The controller, utilising Zookeeper, manages the cluster functions for us to off
     git clone https://github.com/swiftsuretech/nifi_project.git
     ```
 
-- Set up a new project in DKP:
+- Set up a new project in DKP called "nifi" in a namespace with the same name:
+<p align="center">
+    <img src="./images/start_project.gif" width="800">
+</p>
 
-    <img src="./images/start_project.gif" width="600" align="center">
+- Apply the manifests in the "nifi-deploy" directory to deploy the following Kubernetes objects:
+    - Custom Resource Definitions for nifi objects
+    - A working ingress controller
+    - A repo defining our custom catalogue
+
+    <img src=./images/exclam.png height="22" style="float: left">**Important** - Ensure you use "kubectl create rather than apply!"
+
+    ```bash
+    kubectl create -f ./nifi-deploy --recursive
+    ```
+
+- Go back to the DKP UI, you should see a new catalogue item appear in the applications tab
+
+<p align="center">
+    <img src="./images/catalogue_item.png" width="400">
+</p>
+
+- Click on "View Details" and the "Deploy". This will deploy the NiFi controller and 3 instances of Zookeeper as a stateful set. These objects will take a few minutes to deploy so go and make a cup of tea.
+
+- Check that pods have deployed and are healthy.
+
+    ```bash
+    watch kubectl get po -n nifi
+    ```
+    
+- Deploy the NiFi cluster
+
+    The controller incorporates a number of Custom Resource Definitions. This allows us to generate a "NiFi Cluster" object. An example of a simple NiFi cluster manifest is in the "clusters" directory. It is strongly advised to deploy this cluster using the GitOps tab but for a quick start, apply the example manifest using kubectl:
+
+    ```bash
+    kubectl create -f clusters/nifi-cluster.yaml
+    ```
+- NiFi is a fairly heavyweight Java application. The pods will take a few minutes to come online.
+
+    ```bash
+    watch kubectl get po -n nifi
+    ```
+- Go to the NiFi UI
+
+The user interface endpoint is exposed through the Kommander Traefik ingress controller at the  "/nifi" endpoint. Duplicate the DKP UI url, replacing "/dkp/kommander/dashboard..." with "/nifi"
+
+
 ## Configuration
 
 
