@@ -19,7 +19,7 @@ data:
     # vaultSecret containing a `ca.crt` key with the Vault CA Certificate
     vaultSecret: ""
     # set of namespaces where the operator watches resources
-    namespaces: [nifi-h28s4]
+    namespaces: [nifi]
     # Optional labels to add to all deployed resources
     labels: {}
     # Optional annotations to add to all deployed resources

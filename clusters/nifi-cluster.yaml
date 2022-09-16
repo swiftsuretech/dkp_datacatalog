@@ -2,7 +2,7 @@ apiVersion: nifi.konpyutaika.com/v1alpha1
 kind: NifiCluster
 metadata:
   name: nifi-demo
-  namespace: nifi-h28s4
+  namespace: nifi
 spec:
   service:
     headlessEnabled: true
