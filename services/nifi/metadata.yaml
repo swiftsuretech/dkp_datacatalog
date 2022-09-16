@@ -1,4 +1,4 @@
-displayName: Nifi
+displayName: Apache Nifi
 description: A distributed, data streaming platform.
 category:
   - Data Pipelines

@@ -8,10 +8,10 @@ spec:
   chart:
     spec:
       chart: zookeeper
-      version: 10.1.5
+      version: 10.2.0
       sourceRef:
         kind: HelmRepository
-        name: swiftsuretech
+        name: bitnami
         namespace: ${releaseNamespace}
   interval: 15s
   install:
@@ -22,3 +22,6 @@ spec:
     remediation:
       retries: 30
   targetNamespace: ${releaseNamespace}
+  valuesFrom:
+  - kind: ConfigMap
+    name: zookeeper-defaults
