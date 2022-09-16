@@ -9,5 +9,5 @@ metadata:
 spec:
   interval: 10s
   ref:
-    branch: sourcerepo
+    branch: master
   url: https://github.com/swiftsuretech/nifi_project.git
