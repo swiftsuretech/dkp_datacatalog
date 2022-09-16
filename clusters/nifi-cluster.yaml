@@ -59,8 +59,6 @@ spec:
       nodeConfigGroup: "default_group"
     - id: 3
       nodeConfigGroup: "default_group"
-    - id: 4
-      nodeConfigGroup: "default_group"
   propagateLabels: true
   nifiClusterTaskSpec:
     retryDurationMinutes: 10
