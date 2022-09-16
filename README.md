@@ -52,7 +52,7 @@ The controller, utilising Zookeeper, manages the cluster functions for us to off
     - A working ingress controller
     - A repo defining our custom catalogue
 
-    <img src=./images/exclam.png height="22" style="float: left">**Important** - Ensure you use "kubectl create rather than apply!"
+    <img src=./images/exclam.png height="22" style="float: left">**Important** - Ensure you use "kubectl create" rather than "kubectl apply"!
 
     ```bash
     kubectl create -f ./nifi-deploy --recursive
@@ -86,7 +86,7 @@ The controller, utilising Zookeeper, manages the cluster functions for us to off
     ```
 - Go to the NiFi UI
 
-The user interface endpoint is exposed through the Kommander Traefik ingress controller at the  "/nifi" endpoint. Duplicate the DKP UI url, replacing "/dkp/kommander/dashboard..." with "/nifi"
+    The user interface endpoint is exposed through the Kommander Traefik ingress controller at the  "/nifi" endpoint. Duplicate the DKP UI url, replacing "/dkp/kommander/dashboard..." with "/nifi"
 
 
 ## Configuration
