@@ -7,10 +7,10 @@ metadata:
 spec:
   chart:
     spec:
-      chart: nifikop
-      version: 0.14.6
+      chart: ./chart/nifikop-0.14.0.tgz
+      version: 0.14.0
       sourceRef:
-        kind: HelmRepository
+        kind: GitRepository
         name: swiftsuretech
         namespace: ${releaseNamespace}
   interval: 15s
@@ -22,3 +22,6 @@ spec:
     remediation:
       retries: 30
   targetNamespace: ${releaseNamespace}
+  valuesFrom:
+  - kind: ConfigMap
+    name: nifikop-defaults

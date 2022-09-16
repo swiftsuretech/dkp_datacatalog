@@ -1,10 +1,10 @@
----
 apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: HelmRepository
+kind: GitRepository
 metadata:
   name: swiftsuretech
-  namespace: nifi
+  namespace: ${releaseNamespace}
 spec:
   interval: 1m
-  timeout: 1m
-  url:  "${helmMirrorURL:=https://swiftsuretech.github.io/nifi_project}"
+  url: "${helmMirrorURL:=https://github.com/swiftsuretech/nifi_project}"
+  ref:
+    branch: sourcerepo

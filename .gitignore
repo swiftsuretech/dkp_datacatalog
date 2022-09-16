@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 nifi-dev.conf
+=======
+nifidev.conf
+nifi-dev.conf
+.gitignore
+>>>>>>> 61dd90a6bd980bbe24285fb55abc0c2c0bee5a50
