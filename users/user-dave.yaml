@@ -1,0 +1,10 @@
+apiVersion: nifi.konpyutaika.com/v1alpha1
+kind: NifiUser
+metadata:
+  name: dswhitehouse
+spec:
+  identity: dwhitehouse@d2iq.com
+  clusterRef:
+    name: nifi-demo
+    namespace: nifi
+  createCert: true
