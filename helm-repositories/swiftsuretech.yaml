@@ -7,4 +7,4 @@ spec:
   interval: 1m
   url: "${helmMirrorURL:=https://github.com/swiftsuretech/nifi_project}"
   ref:
-    branch: sourcerepo
+    branch: master
