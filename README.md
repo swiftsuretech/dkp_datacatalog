@@ -17,7 +17,7 @@ There are a small number of existing HELM charts available through bitnami and a
 
 There is an active project called NiFiKop, standing for NiFi Kubernetes Operator, which seeks to address these issues and provide a true NiFi experience tailored specifically for Kubernetes.
 
-Rather than a helm chart consisting of a Stateful Set and peripheral services, it is a bespoke controller for NiFi. It generates a number of CRDs which allow the user to generate a cluster object, as well as advanced feature such as user and access management and dataflows.
+Rather than a helm chart consisting of a Stateful Set and peripheral services, it is an operator for NiFi. It generates a number of CRDs which allow the user to generate a cluster object, as well as advanced feature such as user and access management and dataflows.
 
 The project is available [here](https://konpyutaika.github.io/nifikop/). It is open source, under active development but still in beta.
 
