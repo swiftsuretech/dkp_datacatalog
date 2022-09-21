@@ -7,3 +7,10 @@ spec:
   count: 1
   elasticsearchRef:
     name: elastic
+  podTemplate:
+    spec:
+      containers:
+      - name: kibana
+        env:
+          - name: SERVER_BASEPATH
+            value: /kibana
