@@ -1,0 +1,12 @@
+displayName: Kibana
+description: Visualise your Elasticsearch data.
+category:
+  - Data Pipelines
+type: catalog
+scope:
+  - project
+overview: |-
+  # Overview
+  Kibana is a free and open user interface that lets you visualize your Elasticsearch data and navigate the Elastic Stack. Do anything from tracking query load to understanding the way requests flow through your apps.
+
+icon: PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNNyAyNHYzMy41OGwyMy44Ny0yNy41QTQ5LjgyIDQ5LjgyIDAgMCAwIDcgMjR6IiBmaWxsPSIjMzQzNzQxIi8+PHBhdGggZD0iTTcgMHYyNGE0OS44MiA0OS44MiAwIDAgMSAyMy44NyA2LjA5TDU3IDB6IiBmaWxsPSIjZjA0ZTk4Ii8+PHBhdGggZD0iTTM2IDMzLjNMOS4zNyA2NEg1NmE1MCA1MCAwIDAgMC0yMC0zMC42OXoiIGZpbGw9IiMwMGJmYjMiLz48L3N2Zz4=
