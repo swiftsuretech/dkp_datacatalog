@@ -3,4 +3,5 @@ kind: Kustomization
 resources:
   - nifi.yaml
   - zookeeper.yaml
+  - common.yaml
   - ../../../helm-repositories
