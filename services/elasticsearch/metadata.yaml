@@ -1,4 +1,4 @@
-displayName: Elastic
+displayName: Elastic / Kibana
 description: A search engine based on the Lucene library.
 category:
   - Data Pipelines
