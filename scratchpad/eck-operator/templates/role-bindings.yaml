@@ -60,4 +60,5 @@ subjects:
 - kind: ServiceAccount
   name: {{ $svcAccount }}
   namespace: {{ $.Release.Namespace }}
-{{- end }} {{- /* end of operator role binding if operator namespace is not managed */}}
+{{- end }}
+{{- end }}
