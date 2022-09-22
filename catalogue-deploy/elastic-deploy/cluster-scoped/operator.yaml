@@ -27,40 +27,6 @@ metadata:
     helm.sh/chart: eck-operator-2.4.0
     app.kubernetes.io/managed-by: Helm
 ---
-# Source: eck-operator/templates/configmap.yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: elastic-operator
-  namespace: nifi
-  labels:
-    
-    app.kubernetes.io/name: elastic-operator
-    app.kubernetes.io/instance: release-name
-    app.kubernetes.io/version: "2.4.0"
-    helm.sh/chart: eck-operator-2.4.0
-    app.kubernetes.io/managed-by: Helm
-data:
-  eck.yaml: |-
-    log-verbosity: 0
-    metrics-port: 0
-    container-registry: docker.elastic.co
-    max-concurrent-reconciles: 3
-    ca-cert-validity: 8760h
-    ca-cert-rotate-before: 24h
-    cert-validity: 8760h
-    cert-rotate-before: 24h
-    exposed-node-labels: [topology.kubernetes.io/.*,failure-domain.beta.kubernetes.io/.*]
-    set-default-security-context: auto-detect
-    kube-client-timeout: 60s
-    elasticsearch-client-timeout: 180s
-    disable-telemetry: false
-    distribution-channel: helm
-    validate-storage-class: true
-    enable-webhook: true
-    webhook-name: elastic-operator.nifi.k8s.elastic.co
-    enable-leader-election: true
----
 # Source: eck-operator/templates/cluster-roles.yaml
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
