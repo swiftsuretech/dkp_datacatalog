@@ -61,4 +61,3 @@ subjects:
   name: {{ $svcAccount }}
   namespace: {{ $.Release.Namespace }}
 {{- end }} {{- /* end of operator role binding if operator namespace is not managed */}}
-{{- else }} {{- /* we can create cluster-scoped resources so just create a cluster role binding */}}
