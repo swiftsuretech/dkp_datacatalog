@@ -5,6 +5,7 @@ metadata:
   labels:
     run: test
   name: test
+  namespace: nifi
 spec:
   containers:
   - command:
