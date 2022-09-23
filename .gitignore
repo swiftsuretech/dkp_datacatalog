@@ -5,3 +5,4 @@ nifidev.conf
 nifi-dev.conf
 .gitignore
 >>>>>>> 61dd90a6bd980bbe24285fb55abc0c2c0bee5a50
+kafka-operator-0.21.2.tgz
