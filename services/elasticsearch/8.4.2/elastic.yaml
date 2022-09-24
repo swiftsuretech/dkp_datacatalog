@@ -16,7 +16,7 @@ spec:
   interval: 15s
   install:
     remediation:
-      retries: 3
+      retries: 30
     createNamespace: false
   upgrade:
     remediation:
