@@ -8,6 +8,9 @@ data:
   values.yaml: |-
     ## Secret with default environment variable configurations to be used by MinIO Tenant.
     ## Not recommended for production deployments! Create the secret manually instead.
+    spec:
+      credsSecret:
+      name: minio1-env-configuration
     secrets:
       name: minio1-env-configuration
       # MinIO root user and password
