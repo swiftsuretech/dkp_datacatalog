@@ -24,4 +24,4 @@ spec:
   targetNamespace: ${releaseNamespace}
   valuesFrom:
   - kind: ConfigMap
-    name: cm-nifi
+    name: nifikop-defaults
