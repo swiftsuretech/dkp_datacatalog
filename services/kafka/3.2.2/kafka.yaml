@@ -12,7 +12,7 @@ spec:
         kind: HelmRepository
         name: banzaicloud
         namespace: ${workspaceNamespace}
-      version: 0.20.2
+      version: 0.21.2
   interval: 15s
   install:
     remediation:
