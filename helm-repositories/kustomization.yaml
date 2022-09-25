@@ -4,3 +4,4 @@ resources:
   - swiftsuretech.yaml
   - elastic.yaml
   - nifi.yaml
+  - nifikop.yaml
