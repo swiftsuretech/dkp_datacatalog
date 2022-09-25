@@ -5,3 +5,4 @@ resources:
   - nifikop.yaml
   - bitnami.yaml
   - banzaicloud.yaml
+  - minio.yaml
