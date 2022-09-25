@@ -1,0 +1,11 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: HelmRepository
+metadata:
+  name: minio
+  namespace: ${workspaceNamespace}
+  labels:
+    kommander.d2iq.io/dkp-airgapped: supported
+spec:
+  url: "${helmMirrorURL:=https://operator.min.io}"
+  interval: 10m
