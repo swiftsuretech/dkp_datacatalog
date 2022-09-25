@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - swiftsuretech.yaml
   - elastic.yaml
+  - nifi.yaml
