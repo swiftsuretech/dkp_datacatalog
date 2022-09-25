@@ -1,9 +1,0 @@
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: zookeeper-defaults
-  namespace: ${releaseNamespace}
-data:
-  values.yaml: |-
-    replicaCount: 3
