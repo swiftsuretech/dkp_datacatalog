@@ -7,11 +7,11 @@ metadata:
 spec:
   chart:
     spec:
-      chart: ./chart/zookeeper-10.2.0.tgz
+      chart: zookeeper
       version: 10.2.0
       sourceRef:
-        kind: GitRepository
-        name: swiftsuretech
+        kind: HelmRepository
+        name: bitnami
         namespace: ${releaseNamespace}
   interval: 15s
   install:
