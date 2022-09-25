@@ -8,4 +8,4 @@ metadata:
     kommander.d2iq.io/dkp-airgapped: supported
 spec:
   url: "${helmMirrorURL:=https://helm.elastic.co}"
-  interval: 10m
+  interval: 5m
