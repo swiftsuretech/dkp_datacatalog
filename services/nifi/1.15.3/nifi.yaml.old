@@ -7,11 +7,11 @@ metadata:
 spec:
   chart:
     spec:
-      chart: ./nifikop
+      chart: ./chart/nifikop-0.14.0.tgz
       version: 0.14.0
       sourceRef:
         kind: GitRepository
-        name: nifikop
+        name: swiftsuretech
         namespace: ${releaseNamespace}
   interval: 15s
   install:
@@ -24,4 +24,4 @@ spec:
   targetNamespace: ${releaseNamespace}
   valuesFrom:
   - kind: ConfigMap
-    name: cm-nifi
+    name: nifikop-defaults
