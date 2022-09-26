@@ -28,7 +28,7 @@ data:
     ## Ref: https://kubernetes.io/docs/user-guide/compute-resources/
     resources:
       requests:
-        cpu: 10m
+        cpu: 1
         memory: 8Gi
       limits:
         cpu: 1
