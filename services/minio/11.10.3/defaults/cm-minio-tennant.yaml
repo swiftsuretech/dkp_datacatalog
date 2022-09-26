@@ -96,7 +96,7 @@ data:
     ## @param mode MinIO&reg; server mode (`standalone` or `distributed`)
     ## ref: https://docs.minio.io/docs/distributed-minio-quickstart-guide
     ##
-    mode: standalone
+    mode: distributed
     ## MinIO&reg; authentication parameters
     ##
     auth:
