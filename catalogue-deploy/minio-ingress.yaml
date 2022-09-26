@@ -15,7 +15,7 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: kommander-traefik
     traefik.ingress.kubernetes.io/router.tls: "true"
-    traefik.ingress.kubernetes.io/router.middlewares: kommander-stripprefixes-minio@kubernetescrd
+    traefik.ingress.kubernetes.io/router.middlewares: kommander-stripprefixes-minio@kubernetescrd,kommander-forwardauth@kubernetescrd
   labels:
     app: minio
   name: minio-ingress
