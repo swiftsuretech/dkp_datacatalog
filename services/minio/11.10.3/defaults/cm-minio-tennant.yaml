@@ -145,8 +145,18 @@ data:
     ## @param extraEnvVars Extra environment variables to be set on MinIO&reg; container
     ## e.g:
     ## extraEnvVars:
-    ##   - name: FOO
-    ##     value: "bar"
+    ##   - name: CONSOLE_SUBPATH
+    ##     value: /minio
+ 
+ 
+    extraEnvVars:
+      - name: CONSOLE_SUBPATH
+        value: /minio
+      - name: MINIO_CONSOLE_SUBPATH
+        value: /minio
+
+
+
     ##
     extraEnvVars: {}
     ## @param extraEnvVarsCM ConfigMap with extra environment variables
