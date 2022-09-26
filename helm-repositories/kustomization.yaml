@@ -6,3 +6,5 @@ resources:
   - bitnami.yaml
   - banzaicloud.yaml
   - minio.yaml
+  - cloudhut.yaml
+  - traefik.yaml
