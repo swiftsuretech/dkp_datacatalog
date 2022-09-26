@@ -144,15 +144,15 @@ data:
       mountPath: ""
     ## @param extraEnvVars Extra environment variables to be set on MinIO&reg; container
     ## e.g:
-    ## extraEnvVars:
-    ##   - name: CONSOLE_SUBPATH
-    ##     value: /minio
- 
- 
     extraEnvVars:
       - name: CONSOLE_SUBPATH
         value: /minio
-      - name: MINIO_CONSOLE_SUBPATH
+ 
+ 
+    ##extraEnvVars:
+    ##  - name: CONSOLE_SUBPATH
+    ##    value: /minio
+    ##  - name: MINIO_CONSOLE_SUBPATH
         value: /minio
 
 
