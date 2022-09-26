@@ -1,0 +1,93 @@
+apiVersion: minio.min.io/v2
+kind: Tenant
+metadata:
+  labels:
+    app: minio-1
+  name: minio-1
+  namespace: nifi
+spec:
+  buckets:
+  - name: newsitems
+  credsSecret:
+    name: minio1-env-configuration
+  exposeServices:
+    console: true
+    minio: true
+  image: quay.io/minio/minio:RELEASE.2022-01-08T03-11-54Z
+  podManagementPolicy: Parallel
+  pools:
+  - resources:
+      limits:
+        cpu: 750m
+        memory: 1Gi
+      requests:
+        cpu: 250m
+        memory: 768Mi
+    securityContext:
+      fsGroup: 0
+      runAsGroup: 0
+      runAsNonRoot: false
+      runAsUser: 0
+    servers: 4
+    volumeClaimTemplate:
+      metadata:
+        name: grafana-loki-minio
+      spec:
+        accessModes:
+        - ReadWriteOnce
+        resources:
+          requests:
+            storage: 10Gi
+    volumesPerServer: 1
+  - resources:
+      limits:
+        cpu: 750m
+        memory: 1Gi
+      requests:
+        cpu: 250m
+        memory: 768Mi
+    securityContext:
+      fsGroup: 0
+      runAsGroup: 0
+      runAsNonRoot: false
+      runAsUser: 0
+    servers: 4
+    volumeClaimTemplate:
+      metadata:
+        name: grafana-loki-minio
+      spec:
+        accessModes:
+        - ReadWriteOnce
+        resources:
+          requests:
+            storage: 10Gi
+    volumesPerServer: 1
+  requestAutoCert: false
+  s3:
+    bucketDNS: false
+  users:
+  - name: grafana-loki-minio-user
+status:
+  availableReplicas: 8
+  certificates:
+    autoCertEnabled: false
+  currentState: Initialized
+  drivesOnline: 8
+  healthStatus: green
+  pools:
+  - legacySecurityContext: false
+    ssName: grafana-loki-minio-ss-0
+    state: PoolInitialized
+  - legacySecurityContext: false
+    ssName: grafana-loki-minio-ss-1
+    state: PoolInitialized
+  provisionedBuckets: true
+  provisionedUsers: true
+  revision: 0
+  syncVersion: v4.3.0
+  usage:
+    capacity: 41671540736
+    rawCapacity: 85899345920
+    rawUsage: 778432512
+    usage: 199758483
+  writeQuorum: 3
