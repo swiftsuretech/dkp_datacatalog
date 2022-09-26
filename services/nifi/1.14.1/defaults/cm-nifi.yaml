@@ -29,10 +29,10 @@ data:
     resources:
       requests:
         cpu: 10m
-        memory: 64Mi
+        memory: 8Gi
       limits:
         cpu: 1
-        memory: 512Mi
+        memory: 10Gi
     ## pod spec host aliases for the operator
     ## Ref: https://kubernetes.io/docs/tasks/network/customize-hosts-file-for-pods/
     hostAliases: []
