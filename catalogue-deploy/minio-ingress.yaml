@@ -29,5 +29,5 @@ spec:
             name: nifi-minio-tennant
             port:
               number: 9001
-        path: /minio
+        path: /minio/(/|$)(.*)
         pathType: Prefix
