@@ -651,7 +651,7 @@ data:
     ingress:
       ## @param ingress.enabled Enable ingress controller resource for MinIO Console
       ##
-      enabled: true
+      enabled: false
       ## @param ingress.apiVersion Force Ingress API version (automatically detected if not set)
       ##
       apiVersion: ""
