@@ -662,7 +662,7 @@ data:
       ingressClassName: ""
       ## @param ingress.hostname Default host for the ingress resource
       ##
-      hostname: minio.local
+      hostname: '/*'
       ## @param ingress.path The Path to MinIO&reg;. You may need to set this to '/*' in order to use this with ALB ingress controllers.
       ##
       path: /
