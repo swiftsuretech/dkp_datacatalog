@@ -8,3 +8,4 @@ resources:
   - minio.yaml
   - cloudhut.yaml
   - traefik.yaml
+  - registry.yaml
