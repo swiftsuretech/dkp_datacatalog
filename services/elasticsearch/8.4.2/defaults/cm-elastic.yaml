@@ -45,12 +45,12 @@ data:
                 order: -99
           reserved_realm:
             enabled: "false"
-        enabled: "false"
+        enabled: "true"
         http:
           ssl:
             certificate: /usr/share/elasticsearch/config/http-certs/tls.crt
             certificate_authorities: /usr/share/elasticsearch/config/http-certs/ca.crt
-            enabled: false
+            enabled: true
             key: /usr/share/elasticsearch/config/http-certs/tls.key
         transport:
           ssl:
