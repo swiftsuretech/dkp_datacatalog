@@ -9,4 +9,4 @@ with open("./queries.txt", 'w+') as queries:
                 month = "0"+month
             if len(next_month) == 1:
                 next_month = "0"+next_month
-            queries.write(f"https://api.gdeltproject.org/api/v2/doc/doc?query=kubernetes&mode=ArtList&maxrecords=250&sort=DateAsc&format=json&STARTDATETIME={year}{month}01000000&ENDDATETIME={year}{month}31235959\n")
+            queries.write(f"https://api.gdeltproject.org/api/v2/doc/doc?query=(devops OR gitops OR kubernetes OR containerization OR \"cloud native\" OR \"machine learning\")&mode=ArtList&maxrecords=250&sort=DateAsc&format=json&STARTDATETIME={year}{month}01000000&ENDDATETIME={year}{month}31235959\n")
