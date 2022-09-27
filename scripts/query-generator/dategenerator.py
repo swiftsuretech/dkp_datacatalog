@@ -9,4 +9,8 @@ with open("./queries.txt", 'w+') as queries:
                     day = str(day)
                     if len(day) == 1:
                         day = "0"+day
-                        queries.write(f"https://api.gdeltproject.org/api/v2/doc/doc?query=technology&mode=ArtList&maxrecords=250&sort=DateAsc&format=json&STARTDATETIME={year}{month}{day}000000&ENDDATETIME={year}{month}{day}235959\n")
+                    for hour in range(1, 24):
+                        hour = str(hour)
+                        if len(hour) == 1:
+                            hour = "0"+hour
+                        queries.write(f"https://api.gdeltproject.org/api/v2/doc/doc?query=technology&mode=ArtList&maxrecords=250&sort=DateAsc&format=json&STARTDATETIME={year}{month}{day}{hour}0000&ENDDATETIME={year}{month}{day}{hour}5959\n")
