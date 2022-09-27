@@ -1,0 +1,33 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: stripprefixes-elastic
+  namespace: kommander
+spec:
+  stripPrefix:
+    prefixes:
+    - /elastic
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: kommander-traefik
+    traefik.ingress.kubernetes.io/router.tls: "true"
+    traefik.ingress.kubernetes.io/router.middlewares: kommander-stripprefixes-elastic@kubernetescrd
+  labels:
+    app: elastic
+  name: elastic-ingress
+  namespace: nifi
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          service:
+            name: elastic-es-http
+            port:
+              number: 9200
+        path: /elastic
+        pathType: Prefix
