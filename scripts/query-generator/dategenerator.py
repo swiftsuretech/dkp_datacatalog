@@ -9,4 +9,4 @@ with open("./queries.txt", 'w+') as queries:
                     day = str(day)
                     if len(day) == 1:
                         day = "0"+day
-                        queries.write(f"https://api.gdeltproject.org/api/v2/doc/doc?query=(devops OR gitops OR kubernetes OR containerization OR \"cloud native\" OR \"machine learning\")&mode=ArtList&maxrecords=250&sort=DateAsc&format=json&STARTDATETIME={year}{month}{day}000000&ENDDATETIME={year}{month}{day}235959\n")
+                        queries.write(f"https://api.gdeltproject.org/api/v2/doc/doc?query=technology&mode=ArtList&maxrecords=250&sort=DateAsc&format=json&STARTDATETIME={year}{month}{day}000000&ENDDATETIME={year}{month}{day}235959\n")
