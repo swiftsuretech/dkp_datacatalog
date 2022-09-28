@@ -11,7 +11,7 @@ spec:
       version: 0.1.0
       sourceRef:
         kind: GitRepository
-        name: swiftsure
+        name: streamlit
         namespace: ${releaseNamespace}
   interval: 15s
   install:
