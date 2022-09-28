@@ -3,7 +3,6 @@ apiVersion: traefik.containo.us/v1alpha1
 kind: Middleware
 metadata:
   name: stripprefixes-elastic
-  namespace: kommander
 spec:
   stripPrefix:
     prefixes:
@@ -19,7 +18,6 @@ metadata:
   labels:
     app: elastic
   name: elastic-ingress
-  namespace: nifi
 spec:
   rules:
   - http:

@@ -4,7 +4,6 @@ metadata:
   labels:
     app: minio-1
   name: minio-1
-  namespace: nifi
 spec:
   buckets:
   - name: newsitems

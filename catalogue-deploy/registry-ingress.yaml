@@ -8,7 +8,6 @@ metadata:
   labels:
     app: registry
   name: registry-ingress
-  namespace: nifi
 spec:
   rules:
   - http:

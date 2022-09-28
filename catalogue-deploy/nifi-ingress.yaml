@@ -8,7 +8,6 @@ metadata:
   labels:
     app: nifi
   name: nifi-ingress
-  namespace: nifi
 spec:
   rules:
   - http:
