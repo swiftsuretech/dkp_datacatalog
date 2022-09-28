@@ -9,3 +9,4 @@ resources:
   - cloudhut.yaml
   - traefik.yaml
   - registry.yaml
+  - swiftsure.yaml
