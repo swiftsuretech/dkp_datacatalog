@@ -2,3 +2,4 @@ streamlit-app/*
 .gitignore
 nifi-dev.conf
 .vscode/settings.json
+*venv*

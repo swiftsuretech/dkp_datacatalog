@@ -1,0 +1,45 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "streamlit.fullname" . }}
+  labels:
+    {{- include "streamlit.labels" . | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "streamlit.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "streamlit.labels" . | nindent 8 }}
+    spec:
+      containers:
+      - name: streamlit
+        image: "dswhitehouse/streamlit:0.1"
+        command: ["/bin/bash"]
+        args: ["-c", "pip install -r requirements.txt && streamlit run streamlit_app.py --server.port=8502 --server.address=0.0.0.0"]
+        resources:
+          requests:
+            memory: "500Mi"
+            cpu: "250m"
+          limits:
+            memory: "500Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8502
+        volumeMounts:
+          - name: streamlit-config
+            mountPath: /app
+      volumes:
+        - name: streamlit-config
+          configMap:
+            name: streamlit-app
+            items:
+              - key: app
+                path: streamlit_app.py
+              - key: requirements
+                path: requirements.txt
