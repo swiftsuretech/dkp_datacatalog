@@ -7,11 +7,11 @@ metadata:
 spec:
   chart:
     spec:
-      chart: ./streamlit-app/deploy
+      chart: streamlit
       version: 0.1.0
       sourceRef:
-        kind: GitRepository
-        name: streamlit
+        kind: HelmRepository
+        name: swiftsure
         namespace: ${releaseNamespace}
   interval: 15s
   install:
@@ -22,6 +22,3 @@ spec:
     remediation:
       retries: 30
   targetNamespace: ${releaseNamespace}
-  valuesFrom:
-  - kind: ConfigMap
-    name: nifikop-defaults
