@@ -3,6 +3,8 @@ apiVersion: traefik.containo.us/v1alpha1
 kind: Middleware
 metadata:
   name: stripprefixes-streamlit
+  labels:
+    {{- include "streamlit.labels" . | nindent 4 }}
 spec:
   stripPrefix:
     prefixes:
@@ -16,7 +18,7 @@ metadata:
     traefik.ingress.kubernetes.io/router.tls: "true"
     traefik.ingress.kubernetes.io/router.middlewares: {{.Release.Namespace}}-stripprefixes-streamlit@kubernetescrd
   labels:
-    app: streamlit
+    {{- include "streamlit.labels" . | nindent 4 }}
   name: streamlit-ingress
 spec:
   rules:

@@ -5,8 +5,8 @@ metadata:
     kubernetes.io/ingress.class: kommander-traefik
     traefik.ingress.kubernetes.io/router.tls: "true"
     traefik.ingress.kubernetes.io/router.middlewares: kommander-forwardauth@kubernetescrd
-  labels:
-    app: nifi
+  labels:     
+    {{- include "data-catalog.labels" . | nindent 4 }}
   name: nifi-ingress
 spec:
   rules:

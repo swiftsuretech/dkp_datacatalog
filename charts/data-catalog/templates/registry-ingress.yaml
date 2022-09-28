@@ -6,8 +6,7 @@ metadata:
     traefik.ingress.kubernetes.io/router.tls: "true"
     traefik.ingress.kubernetes.io/router.middlewares: kommander-forwardauth@kubernetescrd
   labels:
-    app: registry
-    {{- include "streamlit.labels" . | nindent 4 }}
+    {{- include "data-catalog.labels" . | nindent 4 }}
   name: registry-ingress
 spec:
   rules:

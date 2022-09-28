@@ -3,6 +3,8 @@ apiVersion: traefik.containo.us/v1alpha1
 kind: Middleware
 metadata:
   name: stripprefixes-minio
+  labels:     
+    {{- include "data-catalog.labels" . | nindent 4 }}
 spec:
   stripPrefix:
     prefixes:
@@ -15,8 +17,8 @@ metadata:
     kubernetes.io/ingress.class: kommander-traefik
     traefik.ingress.kubernetes.io/router.tls: "true"
     # traefik.ingress.kubernetes.io/router.middlewares: kommander-stripprefixes-minio@kubernetescrd,kommander-forwardauth@kubernetescrd
-  labels:
-    app: minio
+  labels:     
+    {{- include "data-catalog.labels" . | nindent 4 }}
   name: minio-ingress
 spec:
   rules:

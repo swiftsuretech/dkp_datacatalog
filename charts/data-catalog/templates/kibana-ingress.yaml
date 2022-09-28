@@ -4,6 +4,8 @@ kind: Middleware
 metadata:
   name: stripprefixes-kibana
   namespace: kommander
+  labels:     
+    {{- include "data-catalog.labels" . | nindent 4 }}
 spec:
   stripPrefix:
     prefixes:
@@ -17,8 +19,8 @@ metadata:
     traefik.ingress.kubernetes.io/router.tls: "true"
     traefik.ingress.kubernetes.io/router.middlewares: kommander-stripprefixes-kibana@kubernetescrd,kommander-forwardauth@kubernetescrd
     #   
-  labels:
-    app: kibana
+  labels:     
+    {{- include "data-catalog.labels" . | nindent 4 }}
   name: kibana-ingress
 spec:
   rules:
