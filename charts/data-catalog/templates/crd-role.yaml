@@ -22,5 +22,5 @@ roleRef:
   name: crd-creation
 subjects:
 - kind: ServiceAccount
-  name: nifi
-  namespace: nifi
+  name: {{.Release.Namespace}}
+  namespace: {{.Release.Namespace}}
