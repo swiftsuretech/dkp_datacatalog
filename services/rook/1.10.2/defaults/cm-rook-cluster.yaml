@@ -11,10 +11,10 @@ data:
     # Declare variables to be passed into your templates.
 
     # Namespace of the main rook operator
-    operatorNamespace: rook-ceph
+    # operatorNamespace: rook-ceph
 
     # The metadata.name of the CephCluster CR. The default name is the same as the namespace.
-    # clusterName: rook-ceph
+    clusterName: rook-ceph-operator
 
     # Ability to override the kubernetes version used in rendering the helm chart
     # kubeVersion: 1.21
