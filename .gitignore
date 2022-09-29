@@ -1,6 +1,0 @@
-streamlit-app/*
-.gitignore
-nifi-dev.conf
-.vscode/settings.json
-*venv*
-data-catalog.conf
