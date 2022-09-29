@@ -10,7 +10,7 @@ spec:
     jmxImage: "ghcr.io/banzaicloud/jmx-javaagent:0.16.1"
   headlessServiceEnabled: true
   zkAddresses:
-    - ${releaseNamespace}-zookeeper-kafka:2181
+    - kafka-zookeeper-kafka:2181
   propagateLabels: false
   oneBrokerPerNode: false
   clusterImage: "ghcr.io/banzaicloud/kafka:2.13-3.1.0"
