@@ -7,4 +7,4 @@ metadata:
 data:
   values.yaml: |-
     replicaCount: 3
-    nameOverride: "nifi-zookeeper"
+    fullnameOverride: "nifi-zookeeper"
