@@ -3,7 +3,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: rook-defaults
-  namespace: rook-ceph
+  namespace: ${releaseNamespace}
 data:
   values.yaml: |-
     # Default values for rook-ceph-operator
@@ -43,7 +43,7 @@ data:
     unreachableNodeTolerationSeconds: 5
 
     # Whether rook watches its current namespace for CRDs or the entire cluster, defaults to false
-    currentNamespaceOnly: false
+    currentNamespaceOnly: true
 
     ## Annotations to be added to pod
     annotations: {meta.helm.sh/release-name: data-catalog-4zm5q-rook-cluster}
