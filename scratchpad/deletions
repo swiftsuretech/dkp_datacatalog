@@ -1,0 +1,12 @@
+k delete clusterrole elastic-operator
+k delete clusterrole elastic-operator-view
+k delete clusterrole elastic-operator-edit
+k delete clusterrolebinding elastic-operator
+k delete crd kafkaclusters.kafka.banzaicloud.io
+k delete crd kafkaclusters.kafka.banzaicloud.io --force
+k delete crd kafkaclusters.kafka.banzaicloud.io --force
+k delete crd nificlusters.nifi.konpyutaika.com clusters.nifi.konpyutaika.com --force
+k delete clusterrole kafka-operator-authproxy
+k delete clusterrole kafka-operator-operator
+k delete clusterrolebindings kafka-operator-authproxy kafka-operator-operator
+k delete  ValidatingWebhookConfiguration kafka-operator-validating-webhook
