@@ -10,3 +10,4 @@ resources:
   - traefik.yaml
   - registry.yaml
   - swiftsure.yaml
+  - rhcharts.yaml
