@@ -11,5 +11,5 @@ spec:
     protocol: TCP
     targetPort: 8502
   selector:
-    app: streamlit
+    {{- include "streamlit.labels" . | nindent 4 }}
   type: ClusterIP

@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "streamlit.fullname" . }}
+  name: streamlit-app
   labels:
     app: streamlit
     {{- include "streamlit.labels" . | nindent 4 }}
