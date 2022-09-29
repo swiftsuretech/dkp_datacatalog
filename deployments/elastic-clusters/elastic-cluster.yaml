@@ -26,3 +26,17 @@ spec:
         env:
           - name: SERVER_BASEPATH
             value: /kibana
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: elastic-es-elastic-user
+  labels:
+    common.k8s.elastic.co/type: elasticsearch
+    eck.k8s.elastic.co/credentials: 'true'
+    eck.k8s.elastic.co/owner-kind: Elasticsearch
+    eck.k8s.elastic.co/owner-name: elastic
+    elasticsearch.k8s.elastic.co/cluster-name: elastic
+data:
+  elastic: ZWxhc3RpYw==
+type: Opaque
