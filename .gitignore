@@ -3,3 +3,4 @@ streamlit-app/*
 nifi-dev.conf
 .vscode/settings.json
 *venv*
+data-catalog.conf
