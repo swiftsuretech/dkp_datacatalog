@@ -52,7 +52,7 @@ data:
     
     #envs:
     #  secret: {}
-    #  config: {KAFKA_CLUSTERS_0_NAME: kafka, KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka-headless:29092}
+    config: {KAFKA_CLUSTERS_0_NAME: kafka, KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka-headless:29092}
     
    
     networkPolicy:
