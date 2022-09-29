@@ -11,3 +11,4 @@ resources:
   - registry.yaml
   - swiftsure.yaml
   - rook.yaml
+  - provectus.yaml
