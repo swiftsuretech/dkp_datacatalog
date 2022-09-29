@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: zookeeper-ui-defaults
+  name: kafka-ui-defaults
   namespace: ${releaseNamespace}
 data:
   values.yaml: |-
