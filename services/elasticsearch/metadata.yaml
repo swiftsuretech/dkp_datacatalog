@@ -1,7 +1,7 @@
 displayName: Elastic / Kibana
 description: A search engine based on the Lucene library.
 category:
-  - Data Pipelines
+  - Data Pipeline
 type: catalog
 scope:
   - project

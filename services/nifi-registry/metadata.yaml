@@ -1,7 +1,7 @@
 displayName: Apache NiFi Registry
 description: A central location for storage of NiFi Flows
 category:
-  - Data Pipelines
+  - Data Pipeline
 type: catalog
 scope:
   - project
