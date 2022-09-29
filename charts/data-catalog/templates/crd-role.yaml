@@ -51,6 +51,9 @@ subjects:
   - kind: ServiceAccount
     name: {{.Release.Namespace}}
     namespace: {{.Release.Namespace}}
+  - kind: ServiceAccount
+    name: nifikop
+    namespace: {{.Release.Namespace}}
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
