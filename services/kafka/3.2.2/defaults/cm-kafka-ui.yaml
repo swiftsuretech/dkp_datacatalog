@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: kafka-ui-defaults
+  name: kafka-ui
   namespace: ${releaseNamespace}
 data:
   values.yaml: |-
