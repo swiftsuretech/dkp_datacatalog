@@ -4,6 +4,7 @@ metadata:
   labels:
     controller-tools.k8s.io: "1.0"
   name: kafka
+  namespace: ${releaseNamespace}
 spec:
   monitoringConfig:
     jmxImage: "ghcr.io/banzaicloud/jmx-javaagent:0.16.1"
