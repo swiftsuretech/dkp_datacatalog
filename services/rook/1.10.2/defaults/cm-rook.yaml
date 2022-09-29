@@ -46,7 +46,7 @@ data:
     currentNamespaceOnly: true
 
     ## Annotations to be added to pod
-    annotations: {}
+    annotations: {meta.helm.sh/release-name: data-catalog-4zm5q-rook-cluster}
 
     ## The logging level for the operator: ERROR | WARNING | INFO | DEBUG
     logLevel: INFO
