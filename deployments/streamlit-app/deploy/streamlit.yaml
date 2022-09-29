@@ -12,7 +12,6 @@ data:
 kind: ConfigMap
 metadata:
   name: streamlit-app
-  namespace: nifi
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -63,7 +62,6 @@ metadata:
   labels:
     app: streamlit
   name: streamlit-service
-  namespace: nifi
 spec:
   ports:
   - port: 8502
@@ -93,7 +91,6 @@ metadata:
   labels:
     app: streamlit
   name: streamlit-ingress
-  namespace: nifi
 spec:
   rules:
   - http:
