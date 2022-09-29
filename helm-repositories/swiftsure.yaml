@@ -7,5 +7,5 @@ metadata:
   labels:
     kommander.d2iq.io/dkp-airgapped: supported
 spec:
-  url: "${helmMirrorURL:=https://swiftsuretech.github.io/streamlit-helm/}"
+  url: "${helmMirrorURL:=https://swiftsuretech.github.io/dkp_big_data_catalog/}"
   interval: 5m
