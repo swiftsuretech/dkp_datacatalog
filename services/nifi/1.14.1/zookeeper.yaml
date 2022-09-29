@@ -8,10 +8,10 @@ spec:
   chart:
     spec:
       chart: zookeeper
-      version: 10.2.0
+      version: 0.1.0
       sourceRef:
         kind: HelmRepository
-        name: bitnami
+        name: rhcharts
         namespace: ${releaseNamespace}
   interval: 15s
   install:
