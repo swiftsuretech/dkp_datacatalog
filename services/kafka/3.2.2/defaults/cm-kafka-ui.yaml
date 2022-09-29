@@ -49,11 +49,21 @@ data:
       # keyName: config.yml
       # name: configMapName
     existingSecret: ""
+    
+    
+    
+    
     envs:
       secret: {}
       config:
-        - KAFKA_CLUSTERS_0_NAME: local
-        - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka-headless:29092
+        - name: KAFKA_CLUSTERS_0_NAME
+          value: kafka
+        - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: 
+          value: kafka-headless:29092
+    
+    
+    
+    
     networkPolicy:
       enabled: false
       egressRules:
