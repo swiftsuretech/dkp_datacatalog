@@ -50,20 +50,15 @@ data:
       # name: configMapName
     existingSecret: ""
     
-    
-    
-    
     envs:
       secret: {}
       config:
-        - name: KAFKA_CLUSTERS_0_NAME
-          value: kafka
-        - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: 
-          value: kafka-headless:29092
+      - name: KAFKA_CLUSTERS_0_NAME
+        value: kafka
+      - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: 
+        value: kafka-headless:29092
     
-    
-    
-    
+   
     networkPolicy:
       enabled: false
       egressRules:
