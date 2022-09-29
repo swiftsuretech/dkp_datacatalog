@@ -43,7 +43,7 @@ data:
     unreachableNodeTolerationSeconds: 5
 
     # Whether rook watches its current namespace for CRDs or the entire cluster, defaults to false
-    currentNamespaceOnly: false
+    currentNamespaceOnly: true
 
     ## Annotations to be added to pod
     annotations: {}
