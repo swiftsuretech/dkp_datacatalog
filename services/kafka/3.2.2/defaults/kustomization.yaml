@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - kafka-cm.yaml
   - cm-kafka-zookeeper.yaml
+  - cm-kafka-ui.yaml
