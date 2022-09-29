@@ -5,7 +5,7 @@ metadata:
   name: bitnami
   namespace: ${workspaceNamespace}
   labels:
-    kommander.d2iq.io/dkp-airgapped: supported
+    kommander.d2iq.io/dkp-airgapped: unsupported
 spec:
   url: "${helmMirrorURL:=https://charts.bitnami.com/bitnami}"
   interval: 5m

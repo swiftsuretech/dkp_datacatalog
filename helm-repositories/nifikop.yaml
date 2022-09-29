@@ -3,8 +3,10 @@ kind: GitRepository
 metadata:
   name: nifikop
   namespace: ${releaseNamespace}
+  labels:
+    kommander.d2iq.io/dkp-airgapped: unsupported
 spec:
-  interval: 1m
+  interval: 5m
   url: "${helmMirrorURL:=https://github.com/konpyutaika/nifikop}"
   ref:
     branch: master

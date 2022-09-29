@@ -5,7 +5,7 @@ metadata:
   name: elastic
   namespace: ${workspaceNamespace}
   labels:
-    kommander.d2iq.io/dkp-airgapped: supported
+    kommander.d2iq.io/dkp-airgapped: unsupported
 spec:
   url: "${helmMirrorURL:=https://helm.elastic.co}"
   interval: 5m
