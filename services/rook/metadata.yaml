@@ -1,6 +1,8 @@
 displayName: Rook
 description: Open-Source, Cloud-Native Storage for Kubernetes
   - Data Pipeline
+category:
+  - Data Pipeline
 type: catalog
 scope:
   - project
