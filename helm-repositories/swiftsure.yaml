@@ -7,5 +7,5 @@ metadata:
   labels:
     kommander.d2iq.io/dkp-airgapped: unsupported
 spec:
-  url: "${helmMirrorURL:=https://swiftsuretech.github.io/dkp_big_data_catalog/}"
+  url: "${helmMirrorURL:=https://swiftsuretech.github.io/dkp_datacatalog/}"
   interval: 5m
