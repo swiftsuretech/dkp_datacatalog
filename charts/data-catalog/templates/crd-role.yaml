@@ -5,8 +5,8 @@ metadata:
   labels:     
   {{- include "data-catalog.labels" . | nindent 4 }}
 rules:
-- apiGroups: ["rbac.authorization.k8s.io", "admissionregistration.k8s.io", "apiextensions.k8s.io", "policy"]
-  resources: ["clusterroles", "clusterrolebindings", "validatingwebhookconfigurations", "customresourcedefinitions", "podsecuritypolicies"]
+- apiGroups: ["rbac.authorization.k8s.io", "admissionregistration.k8s.io", "apiextensions.k8s.io", "policy", "storage.k8s.io"]
+  resources: ["clusterroles", "clusterrolebindings", "validatingwebhookconfigurations", "customresourcedefinitions", "podsecuritypolicies", "storageclasses"]
   verbs:
   - "*"
 ---  
