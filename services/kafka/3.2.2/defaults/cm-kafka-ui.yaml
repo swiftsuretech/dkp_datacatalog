@@ -50,9 +50,9 @@ data:
       # name: configMapName
     existingSecret: ""
     
-    #envs:
-    #  secret: {}
-    config: {KAFKA_CLUSTERS_0_NAME: kafka, KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka-headless:29092}
+    envs:
+      secret: {}
+      config: {KAFKA_CLUSTERS_0_NAME: kafka, KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka-headless:29092}
     
    
     networkPolicy:
