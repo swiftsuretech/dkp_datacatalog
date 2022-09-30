@@ -3,6 +3,7 @@ apiVersion: traefik.containo.us/v1alpha1
 kind: Middleware
 metadata:
   name: stripprefixes-elastic
+  namespace: kommander
   labels:     
     {{- include "data-catalog.labels" . | nindent 4 }}
 spec:
