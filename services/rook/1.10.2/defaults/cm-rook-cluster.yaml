@@ -107,7 +107,7 @@ data:
       mon:
         # Set the number of mons to be started. Generally recommended to be 3.
         # For highest availability, an odd number of mons should be specified.
-        count: 3
+        count: 1
         # The mons should be on unique nodes. For production, at least 3 nodes are recommended for this reason.
         # Mons should only be allowed on the same node for test environments where data loss is acceptable.
         allowMultiplePerNode: false
@@ -116,7 +116,7 @@ data:
         # When higher availability of the mgr is needed, increase the count to 2.
         # In that case, one mgr will be active and one in standby. When Ceph updates which
         # mgr is active, Rook will update the mgr services to match the active mgr.
-        count: 2
+        count: 1
         allowMultiplePerNode: false
         modules:
           # Several modules should not need to be included in this list. The "dashboard" and "monitoring" modules
@@ -175,7 +175,7 @@ data:
         # This value should only be set when the cluster is about to be deleted. After the confirmation is set,
         # Rook will immediately stop configuring the cluster and only wait for the delete command.
         # If the empty string is set, Rook will not destroy any data on hosts during uninstall.
-        confirmation: ""
+        confirmation: "yes-really-destroy-data"
         # sanitizeDisks represents settings for sanitizing OSD disks on cluster deletion
         sanitizeDisks:
           # method indicates if the entire disk should be sanitized or simply ceph's metadata
@@ -191,7 +191,7 @@ data:
           iteration: 1
         # allowUninstallWithVolumes defines how the uninstall should be performed
         # If set to true, cephCluster deletion does not wait for the PVs to be deleted.
-        allowUninstallWithVolumes: false
+        allowUninstallWithVolumes: true
 
       # To control where various services will be scheduled by kubernetes, use the placement configuration sections below.
       # The example under 'all' would have all services scheduled on kubernetes nodes labeled with 'role=storage-node' and
@@ -301,7 +301,7 @@ data:
             memory: "100Mi"
 
       # The option to automatically remove OSDs that are out and are safe to destroy.
-      removeOSDsIfOutAndSafeToRemove: false
+      removeOSDsIfOutAndSafeToRemove: true
 
       # priority classes to apply to ceph resources
       priorityClassNames:
