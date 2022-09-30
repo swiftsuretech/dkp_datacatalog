@@ -3,7 +3,11 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: rook-ceph
-spec: {}
+  labels:
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    meta.helm.sh/release-name: catalog
+    meta.helm.sh/release-namespace: rook-ceph
 ---
 # Source: rook-ceph/templates/psp.yaml
 # We expect most Kubernetes teams to follow the Kubernetes docs and have these PSPs.
