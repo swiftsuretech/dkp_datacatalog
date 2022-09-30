@@ -10,3 +10,13 @@ k delete clusterrole kafka-operator-authproxy
 k delete clusterrole kafka-operator-operator
 k delete clusterrolebindings kafka-operator-authproxy kafka-operator-operator
 k delete  ValidatingWebhookConfiguration kafka-operator-validating-webhook
+
+
+
+
+
+k patch cephobjectpool ceph-objectpool -p '{"metadata":{"finalizers":null}}' --type=merge
+k patch cephobjectstore ceph-objectstore -p '{"metadata":{"finalizers":null}}' --type=merge
+k patch cephfilesystem ceph-filesystem -p '{"metadata":{"finalizers":null}}' --type=merge
+k patch cephblockpool ceph-blockpool -p '{"metadata":{"finalizers":null}}' --type=merge
+k patch cephcluster rook-ceph-operator -p '{"metadata":{"finalizers":null}}' --type=merge
