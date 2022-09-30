@@ -128,7 +128,7 @@ data:
       dashboard:
         enabled: true
         # serve the dashboard under a subpath (useful when you are accessing the dashboard via a reverse proxy)
-        # urlPrefix: /ceph-dashboard
+        urlPrefix: /rook/
         # serve the dashboard at the given port.
         # port: 8443
         # Serve the dashboard using SSL (if using ingress to expose the dashboard and `ssl: true` you need to set
