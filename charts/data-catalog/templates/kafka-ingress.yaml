@@ -27,7 +27,7 @@ spec:
       paths:
       - backend:
           service:
-            name: kowl
+            name: {{ .Release.Namespace }}-kowl
             port:
               number: 80
         path: /kafka
