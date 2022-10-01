@@ -13,4 +13,4 @@ kind: ConfigMap
 metadata:
   name: streamlit-app
   labels:
-    {{- include "streamlit.labels" . | nindent 4 }}
+  {{- include "streamlit.labels" . | nindent 4 }}
