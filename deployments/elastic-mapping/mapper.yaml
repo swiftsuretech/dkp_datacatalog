@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: elastic-mapper
+spec:
+  containers:
+  - name: mapper
+    image: curlimages/curl
+    resources:
+      requests:
+        memory: "16Mi"
+        cpu: "250m"
+      limits:
+        memory: "32Mi"
+        cpu: "500m"
+    command: ["/bin/sh", "-c", "curl -X \"DELETE\" \"$ENDPOINT\" -u \"$CREDENTIALS\" -k && curl -XPUT \"$ENDPOINT\" -u \"$CREDENTIALS\" -k && curl -XPUT \"$ENDPOINT/_mapping\" -u \"$CREDENTIALS\" -H \"$CONTENT_TYPE\" -d \"$PAYLOAD\" -k" ]
+    env:
+      - name: CONTENT_TYPE
+        valueFrom:
+          configMapKeyRef:
+            name: es-mapping
+            key: content-type
+      - name: CREDENTIALS
+        valueFrom:
+          configMapKeyRef:
+            name: es-mapping
+            key: credentials
+      - name: ENDPOINT
+        valueFrom:
+          configMapKeyRef:
+            name: es-mapping
+            key: endpoint
+      - name: HEADER
+        valueFrom:
+          configMapKeyRef:
+            name: es-mapping
+            key: header
+      - name: PAYLOAD
+        valueFrom:
+          configMapKeyRef:
+            name: es-mapping
+            key: payload  
+  initContainers:
+    - name: init-myservice
+      image: busybox:1.28
+      command: ['sh', '-c', "until nc elastic-es-default 9200 -vz; do echo 'Waiting for elastic service'; sleep 10; done"]
+  restartPolicy: Never

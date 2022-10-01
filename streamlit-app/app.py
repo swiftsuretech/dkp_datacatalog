@@ -22,18 +22,18 @@ hide_streamlit_style = """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
 # Set up our es instance:
-es = Elasticsearch(["https://a966740a868a2412eba54023109ab905-1124658745.us-west-2.elb.amazonaws.com:443/elastic"], basic_auth=('elastic', '717q73YzUpuwA6WH20H4Jqq7'), verify_certs=False)
+es = Elasticsearch(["https://elastic-es-default:9200"], basic_auth=('elastic', 'elastic'), verify_certs=False)
 
 def count_records():
     try:
-        count = "{:,}".format(es.count(index="tech")['count'])
+        count = "{:,}".format(es.count(index="newsitems")['count'])
     except:
         count = 0
     return count
 
 def aggregate_countries():
     query = {"size":0,"aggs":{"countries":{"terms":{"field":"sourcecountry.keyword","size":25}}}}
-    aggregate = es.search(body=query, index="tech")['aggregations']['countries']['buckets']
+    aggregate = es.search(body=query, index="newsitems")['aggregations']['countries']['buckets']
     df = pd.DataFrame.from_dict(aggregate)
     df = df.rename(columns={"key": "Country", "doc_count": "Number of Articles"})
     for row in df.index:
@@ -54,7 +54,11 @@ with col2:
     st.text(f"There are currently {count_records()} articles in the search engine.")
 
 st.markdown("""---""")    
-st.bar_chart(data=aggregate_countries(), x="Country", y="Number of Articles", height=400, use_container_width=False, width=800)
+try:    
+    st.bar_chart(data=aggregate_countries(), x="Country", y="Number of Articles", height=400, use_container_width=False, width=800)
+except:
+    st.text("There is no data in Elastic yet. Add some data")
+
 st.markdown("""---""")
 
 col1, col2 = st.columns([1, 1])
