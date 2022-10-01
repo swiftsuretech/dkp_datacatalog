@@ -30,5 +30,5 @@ spec:
             name: rook-ceph-mgr-dashboard
             port:
               number: 8443
-        path: /rook
+        path: /ceph
         pathType: Prefix
