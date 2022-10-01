@@ -8,14 +8,15 @@ data:
   values.yaml: |-
     ## NiFi Operator Image
     ##
-    # image:
-    #   repository: ghcr.io/konpyutaika/docker-images/nifikop
-    #  tag: 0.14.0-release
-    #  pullPolicy: Always
-    #  imagePullSecrets:
-    #    enabled: false
+    image:
+      repository: ghcr.io/konpyutaika/docker-images/nifikop
+     tag: 0.14.1release
+     pullPolicy: Always
+     imagePullSecrets:
+       enabled: false
     #    name:
     vaultAddress: ""
+    fullnameOverride: "nifi-operator"
     # vaultSecret containing a `ca.crt` key with the Vault CA Certificate
     vaultSecret: ""
     # set of namespaces where the operator watches resources
