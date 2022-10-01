@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  labels:
+    app: rook-ceph-mg
+  annotations:
+    kubernetes.io/ingress.class: kommander-traefik
+    traefik.ingress.kubernetes.io/router.tls: "true"
+    # traefik.ingress.kubernetes.io/router.middlewares: kommander-stripprefixes-rook@kubernetescrd #kommander-forwardauth@kubernetescrd
+  name: rook-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          service:
+            name: rook-ceph-mgr-dashboard
+            port:
+              number: 7000
+        path: /ceph
+        pathType: Prefix
