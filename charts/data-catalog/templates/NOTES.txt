@@ -1,3 +1,0 @@
-1. The DKP data applications catalog is now deployed into your target project.
-
-2. Enable each of the tools you require. Most are operators so don't forget to apply your deployment artifacts such as nifi / elastic clusters etc.

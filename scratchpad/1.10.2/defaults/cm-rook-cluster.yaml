@@ -1,8 +1,0 @@
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: rook-ceph
-  namespace: ${releaseNamespace}
-data:
-  values.yaml: |-
