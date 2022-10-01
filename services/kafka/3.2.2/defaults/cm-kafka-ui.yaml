@@ -22,7 +22,7 @@ data:
 
     imagePullSecrets: []
     nameOverride: ""
-    fullnameOverride: ""
+    fullnameOverride: "kafka-ui"
 
     serviceAccount:
       # Specifies whether a service account should be created
