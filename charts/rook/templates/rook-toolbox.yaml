@@ -4,6 +4,7 @@ metadata:
   name: rook-ceph-tools
   namespace: rook-ceph # namespace:cluster
   labels:
+  {{- include "rook.labels" . | nindent 4 }}
     app: rook-ceph-tools
 spec:
   replicas: 1

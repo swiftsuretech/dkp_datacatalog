@@ -18,6 +18,8 @@
 kind: ConfigMap
 apiVersion: v1
 metadata:
+  labels:
+  {{- include "rook.labels" . | nindent 4 }}
   name: rook-ceph-operator-config
   # should be in the namespace of the operator
   namespace: rook-ceph # namespace:operator
@@ -498,6 +500,7 @@ metadata:
   name: rook-ceph-operator
   namespace: rook-ceph # namespace:operator
   labels:
+  {{- include "rook.labels" . | nindent 4 }}
     operator: rook
     storage-backend: ceph
     app.kubernetes.io/name: rook-ceph
