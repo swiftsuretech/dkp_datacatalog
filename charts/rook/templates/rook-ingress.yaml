@@ -7,7 +7,7 @@ metadata:
     traefik.ingress.kubernetes.io/router.tls: "true"
     # traefik.ingress.kubernetes.io/router.middlewares: kommander-stripprefixes-rook@kubernetescrd #kommander-forwardauth@kubernetescrd
   labels:     
-    {{- include "data-catalog.labels" . | nindent 4 }}
+    {{- include "rook.labels" . | nindent 4 }}
   name: rook-ingress
   namespace: rook-ceph
 spec:
