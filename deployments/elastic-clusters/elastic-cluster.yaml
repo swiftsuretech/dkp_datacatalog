@@ -20,6 +20,15 @@ metadata:
 spec:
   version: 8.4.2
   http:
+    service:
+      spec:
+        ports:
+        - name: http
+          nodePort: 30300
+          port: 9200
+          protocol: TCP
+          targetPort: 9200
+        type: NodePort   
     tls:
       selfSignedCertificate:
         disabled: true

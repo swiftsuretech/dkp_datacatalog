@@ -4,7 +4,7 @@ metadata:
   name: es-mapping
 data:
   endpoint: |-
-    https://elastic-es-default:9200/newsitems
+    http://elastic-es-default:9200/newsitems
   header: |-
     kbn-xsrf:reporting
   content-type: |-
