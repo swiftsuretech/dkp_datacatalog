@@ -11,6 +11,17 @@ entries:
     urls:
     - https://github.com/swiftsuretech/dkp_datacatalog/releases/download/data-catalog-0.1.0/data-catalog-0.1.0.tgz
     version: 0.1.0
+  rook:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-10-02T16:20:39.596906805Z"
+    description: A Helm chart for Kubernetes
+    digest: b0aef1e176d9c442523cd1325a413b200981dd998c6216781e172e7c96262a96
+    name: rook
+    type: application
+    urls:
+    - https://github.com/swiftsuretech/dkp_datacatalog/releases/download/rook-0.1.0/rook-0.1.0.tgz
+    version: 0.1.0
   streamlit:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -22,4 +33,4 @@ entries:
     urls:
     - https://github.com/swiftsuretech/dkp_datacatalog/releases/download/streamlit-0.1.0/streamlit-0.1.0.tgz
     version: 0.1.0
-generated: "2022-10-01T09:31:13.739589635Z"
+generated: "2022-10-02T16:20:39.704322227Z"
