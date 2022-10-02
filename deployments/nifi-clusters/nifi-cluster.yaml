@@ -25,6 +25,7 @@ spec:
   readOnlyConfig:
     bootstrapProperties:
       nifiJvmMemory: "8G"
+    nifiProperties:
       overrideConfigs: |
         nifi.sensitive.props.key=thisIsABadSensitiveKeyPassword
   pod:

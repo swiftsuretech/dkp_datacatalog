@@ -37,8 +37,8 @@ spec:
     allowUnsupported: false
   skipUpgradeChecks: false
   cleanupPolicy:
-    confirmation: "yes-really-destroy-data"
-    # confirmation: ""
+    # confirmation: "yes-really-destroy-data"
+    confirmation: ""
     # sanitizeDisks represents settings for sanitizing OSD disks on cluster deletion
     sanitizeDisks:
       # method indicates if the entire disk should be sanitized or simply ceph's metadata
