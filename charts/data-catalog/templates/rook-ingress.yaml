@@ -21,6 +21,7 @@ metadata:
   labels:     
     {{- include "data-catalog.labels" . | nindent 4 }}
   name: rook-ingress
+  namespace: rook-ceph
 spec:
   rules:
   - http:
