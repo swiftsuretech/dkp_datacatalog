@@ -19,6 +19,10 @@ metadata:
   name: elastic
 spec:
   version: 8.4.2
+  http:
+    tls:
+      selfSignedCertificate:
+        disabled: true
   nodeSets:
   - name: default
     count: 3
