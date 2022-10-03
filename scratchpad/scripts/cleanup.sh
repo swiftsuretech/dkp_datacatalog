@@ -11,7 +11,7 @@ NAMESPACE=$1
 ROOTDIR='/home/dswhitehouse/dkp_big_data_catalog'
 
 echo "About to clear up resources in namespace: $NAMESPACE"
-sleep 10
+# sleep 10
 echo "\nDeleting App Deployments"
 kubectl get appdeployment -n $NAMESPACE -l kubefed.io/managed=true -o name 2>/dev/null | while read line; do
   echo "Deleting $line"
@@ -108,3 +108,12 @@ echo "--done"
 echo "\nUninstalling the Catalogue"
 helm delete catalog -n $NAMESPACE 2>/dev/null
 echo "--done"
+
+echo "\nDeleting the project"
+kubectl delete project $NAMESPACE -n kommander 2>/dev/null
+echo "--done"
+
+echo "Updating HELM"
+helm repo update
+echo "--done"
+
