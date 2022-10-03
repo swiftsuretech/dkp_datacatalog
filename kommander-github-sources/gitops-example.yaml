@@ -1,0 +1,79 @@
+apiVersion: dispatch.d2iq.io/v1alpha2
+kind: GitopsRepository
+metadata:
+  name: my-elastic-clusters
+  namespace: data-demo
+spec:
+  cloneUrl: https://github.com/swiftsuretech/dkp_datacatalog
+  template:
+    path: ./deployments/elastic-clusters
+    ref:
+      branch: master
+    suspend: true
+---
+apiVersion: dispatch.d2iq.io/v1alpha2
+kind: GitopsRepository
+metadata:
+  name: my-elastic-mappings
+  namespace: data-demo
+spec:
+  cloneUrl: https://github.com/swiftsuretech/dkp_datacatalog
+  template:
+    path: ./deployments/elastic-mapping
+    ref:
+      branch: master
+    suspend: true
+---
+apiVersion: dispatch.d2iq.io/v1alpha2
+kind: GitopsRepository
+metadata:
+  name: my-kafka-clusters
+  namespace: data-demo
+spec:
+  cloneUrl: https://github.com/swiftsuretech/dkp_datacatalog
+  template:
+    path: ./deployments/kafka-clusters
+    ref:
+      branch: master
+    suspend: true
+---
+apiVersion: dispatch.d2iq.io/v1alpha2
+kind: GitopsRepository
+metadata:
+  name: my-kafka-topics
+  namespace: data-demo
+spec:
+  cloneUrl: https://github.com/swiftsuretech/dkp_datacatalog
+  template:
+    path: ./deployments/kafka-topics
+    ref:
+      branch: master
+    suspend: true
+---
+apiVersion: dispatch.d2iq.io/v1alpha2
+kind: GitopsRepository
+metadata:
+  name: my-nifi-clusters
+  namespace: data-demo
+spec:
+  cloneUrl: https://github.com/swiftsuretech/dkp_datacatalog
+  template:
+    path: ./deployments/nifi-clusters
+    ref:
+      branch: master
+    suspend: true
+---
+apiVersion: dispatch.d2iq.io/v1alpha2
+kind: GitopsRepository
+metadata:
+  name: my-ceph-storage
+  namespace: data-demo
+spec:
+  cloneUrl: https://github.com/swiftsuretech/dkp_datacatalog
+  template:
+    path: ./deployments/rook-clusters
+    ref:
+      branch: master
+    suspend: true
+---
+

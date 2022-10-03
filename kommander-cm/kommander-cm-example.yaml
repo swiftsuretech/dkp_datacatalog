@@ -1,0 +1,13 @@
+apiVersion: types.kubefed.io/v1beta1
+kind: FederatedConfigMap
+metadata:
+  annotations:
+    kommander.mesosphere.io/description: This is the description part
+  name: test-kommander-cm
+  namespace: data-demo
+spec:
+  placement:
+    clusterSelector: {}
+  template:
+    data:
+      test: test
