@@ -8,13 +8,13 @@ from datetime import datetime
 from IPython.core.display import HTML, Image
 
 # Set envt to test or demo
-envt = "test"
+envt = ""
 if envt == "test":
     endpoint = "https://a06df877875674d6c8518d5cfe46cbcb-231150320.us-west-2.elb.amazonaws.com:443/elastic/"
 else:
     endpoint = "https://elastic-es-default:9200"
 pd.set_option('display.max_columns', None)
-
+search_query = None
 # Set up the application
 
 st.set_page_config(
@@ -51,15 +51,18 @@ def aggregate_countries():
             df.drop(row, inplace=True)
     return df
 
-def latest_articles():
-    latest = es.search(index="newsitems", size=10, sort="seendate:desc")['hits']['hits']
+def latest_articles(query):
+    if query:
+        latest = es.search(index="newsitems", size=10, sort="seendate:desc", query=query)['hits']['hits']
+    else:
+        latest = es.search(index="newsitems", size=10, sort="seendate:desc")['hits']['hits']
     stripped = []
     for news in latest:
-        stripped.append((news['_source']['sourcecountry'], news['_source']['title'], datetime.strptime(news['_source']['seendate'], '%Y%m%dT%H%M%SZ').strftime('%d %b %Y'), \
+        stripped.append((news['_source']['sourcecountry'], datetime.strptime(news['_source']['seendate'], '%Y%m%dT%H%M%SZ').strftime('%d %b %Y'), news['_source']['title'], \
             news['_source']['url'], news['_source']['socialimage']))
     stripped = pd.DataFrame.from_dict(stripped)
-    stripped.columns = ['Source Country', 'Title of Article', 'Publish Date', 'Link', 'image']
-    stripped['image'] = '<img src="' + stripped['image'] + '" onerror="this.src=\'https://upload.wikimedia.org/wikipedia/commons/b/b2/High-contrast-image-missing.svg\';" height=70 />'
+    stripped.columns = ['Source Country', 'Publish Date', 'Title of Article', 'Link', 'image']
+    stripped['image'] = '<img src="' + stripped['image'] + '" onerror="this.onerror=null;this.src=\'https://upload.wikimedia.org/wikipedia/commons/b/b2/High-contrast-image-missing.svg\';" height=70 />'
     stripped['Link'] = '<a href="' + stripped['Link'] + '">Link</a>'
     return stripped
 
@@ -90,6 +93,8 @@ with st.sidebar:
         st.write("Search News Articles")
         search_term = st.text_input("Search Term")
         submitted = st.form_submit_button("Submit")
+        if submitted:
+            search_query = {"match": {"title": {"query": search_term}}}
 
-html = latest_articles().to_html(render_links=True, escape=False)
+html = latest_articles(search_query).to_html(render_links=True, escape=False, index=False)
 st.markdown(html, unsafe_allow_html=True)
