@@ -99,3 +99,13 @@ The technology stack for this deployment is as follows:
     kubectl config set-context --current --namespace=data-demo 
     ```
 
+## Deploy the catalogue
+
+1. Ensure that you have cloned this repository to enable deployment of the HELM charts locally. Advanced users may use the registry version of this repo from Github.
+2. Ensure that you deploy the registry to the correct namespace by following the step above or, alternatively, setting your namespace as an env variable:
+
+  ```bash
+  helm install catalog charts/data-catalog
+  ```
+3. Open your project to the "Applications" tab. You should see that the catalogue applications are now available.
+<p align="center"><img src="../images/apps_deployed.png" alt="Apps" width="800" /></p>
