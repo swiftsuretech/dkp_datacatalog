@@ -21,4 +21,4 @@ spec:
   upgrade:
     remediation:
       retries: 30
-  targetNamespace: ${releaseNamespace}
+  targetNamespace: rook-ceph
