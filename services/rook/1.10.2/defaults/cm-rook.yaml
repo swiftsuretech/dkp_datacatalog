@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: registry-defaults
+  name: rook-defaults
   namespace: ${releaseNamespace}
 data:
   values.yaml: |-
