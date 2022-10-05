@@ -18,11 +18,11 @@
 - kubectl and helm installed on your local machine.
 - ***Important***: This demonstration uses ceph storage provided by Rook. Whilst our deployment will allow us to deploy a ceph cluster for the project, we need to have the controller pre-installed on the cluster. It is not appropriate to do this from a catalog application as the cleanup in particular is comples. With the operator in place, we will use the catalogue item to deploy individual ceph clusters and associated buckets and object stores later in the process. Run the following to check if the operator is already present:
 
-      ```bash
-      # Do a system wide check to see if our operator is present. 
-      # If the operator pod is returned and shows healthy, we can move on.
-      kubectl get po -n rook-ceph -l app=rook-ceph-operator
-      ```
+    ```bash
+    # Do a system wide check to see if our operator is present. 
+    # If the operator pod is returned and shows healthy, we can move on.
+    kubectl get po -n rook-ceph -l app=rook-ceph-operator
+    ```
     If there is no ceph operator installed on the system, deploy it as follows:
     ```bash
     # Add the rook repo and install the operator
