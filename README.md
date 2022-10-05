@@ -211,7 +211,7 @@ The technology stack for this deployment is as follows:
 1. Log into the Ceph user interface as the "admin" user. You will first need to recover the generated admin password. This may be found in a secret called "rook-ceph-dashboard-password" in the "rook-ceph namespace". Recover it as follows:
 
     ```bash
-    kubectl get secret -n rook-ceph rook-ceph-dashboard-password --template={{.data.password}} | base64 -d
+    kubectl get secret -n rook-ceph rook-ceph-dashboard-password --template={{.data.password}} | base64 -d && echo
     ```
 
 2. Generate a service account for NiFi. Ensure that you uncheck "Auto-generate Key" and add your own access key and secret, both set to NiFi for this demo.
