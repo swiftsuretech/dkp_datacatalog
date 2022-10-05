@@ -1,0 +1,24 @@
+controller services:
+csv reader: 
+cbe2d775-154c-3877-9e39-71a67f3e06a7
+json writer:
+3ef36850-d43a-3104-8ad0-09deb9e38340
+
+# Get a clientID
+curl http://nifi-demo-headless:8080/nifi-api/flow/client-id
+
+# Enable or disable a controller service
+curl -X PUT -d '{"revision":{"clientId":"a3182ecc-0183-1000-025a-388e34140f71","version":1},"component":{"id":"cbe2d775-154c-3877-9e39-71a67f3e06a7","state":"DISABLED"}}' -H "Content-Type:application/json" http://nifi-demo-headless:8080/nifi-api/controller-services/cbe2d775-154c-3877-9e39-71a67f3e06a7 | jq
+
+# get the state of a processor
+
+curl http://nifi-demo-headless:8080/nifi-api/processors/3d0102dd-3093-3087-9bd0-9bbaf5c016d4 | jq
+
+
+# update pw
+
+curl -X PUT -d '{"component":{"id":"3d0102dd-3093-3087-9bd0-9bbaf5c016d4","name":"PutElasticsearchHttp","config":{"concurrentlySchedulableTaskCount":"1","schedulingPeriod":"0 sec","executionNode":"ALL","penaltyDuration":"30 sec","yieldDuration":"1 sec","bulletinLevel":"WARN","schedulingStrategy":"TIMER_DRIVEN","comments":"","runDurationMillis":0,"autoTerminatedRelationships":["retry","success"],"properties":{"Password":"elastic"}},"state":"STOPPED"},"revision":{"clientId":"a3182ecc-0183-1000-025a-388e34140f71","version":5},"disconnectedNodeAcknowledged":false}' -H "Content-Type:application/json" http://nifi-demo-headless:8080/nifi-api/processors/3d0102dd-3093-3087-9bd0-9bbaf5c016d4 | jq
+
+
+
+curl -X PUT -d '{"component":{"id":"3d0102dd-3093-3087-9bd0-9bbaf5c016d4","name":"PutElasticsearchHttp","config":{"concurrentlySchedulableTaskCount":"1","schedulingPeriod":"0 sec","executionNode":"ALL","penaltyDuration":"30 sec","yieldDuration":"1 sec","bulletinLevel":"WARN","schedulingStrategy":"TIMER_DRIVEN","comments":"","runDurationMillis":0,"autoTerminatedRelationships":["retry","success"],"properties":{"Password":"elastic"}},"state":"STOPPED"},"revision":{"clientId":"a389c01e-0183-1000-7448-572d914094af","version":},"disconnectedNodeAcknowledged":false}' -H "Content-Type:application/json" http://nifi-demo-headless:8080/nifi-api/processors/3d0102dd-3093-3087-9bd0-9bbaf5c016d4 | jq

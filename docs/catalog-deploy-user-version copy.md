@@ -26,6 +26,7 @@
     ```bash
     # Add the rook repo and install the operator
     helm repo add rook-release https://charts.rook.io/release
+    helm repo update
     helm install --create-namespace --namespace rook-ceph rook-ceph rook-release/rook-ceph
     # Check the status of the operator. It may take a few minutes to come up
     watch kubectl get po -n rook-ceph -l app=rook-ceph-operator
@@ -49,6 +50,7 @@
 |NiFi Registry|Helm Chart|dysnix|1.1.0|[ArtifactHub]([Link](https://artifacthub.io/packages/helm/dysnix/nifi-registry))|
 |Elasticsearch with Kibana|Operator|ECK|2.4.0|[Elastic ECK]([Link](https://www.elastic.co/blog/introducing-elastic-cloud-on-kubernetes-the-elasticsearch-operator-and-beyond))|
 |Rook Ceph Storage|Operator|Rook|1.10.0|[Rook]([Link](https://rook.io/docs/rook/v1.10/Getting-Started/quickstart/))|
+|Streamlit|Helm Chart|Custom|0.1.0|[Streamlit]([Link](https://streamlit.io/))|
 
 </center>
 <br />
@@ -109,3 +111,7 @@ The technology stack for this deployment is as follows:
   ```
 3. Open your project to the "Applications" tab. You should see that the catalogue applications are now available.
 <p align="center"><img src="../images/apps_deployed.png" alt="Apps" width="800" /></p>
+
+## Deploy our custom applications
+
+1. We are now ready to deploy our custom applications. For the purpose of this demo, we will build out object storage in a data lake provisioned in Ceph storage by the Rook operator 
