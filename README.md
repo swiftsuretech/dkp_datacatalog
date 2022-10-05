@@ -1,4 +1,4 @@
-![alttext](imageLink) <img src="images/d2iq.png" alt="alt text" width="50"/><img src="images/nifi.png" alt="alt text" width="50"/>
+<img src="images/d2iq.png" alt="alt text" width="50"/><img src="images/nifi.png" alt="alt text" width="50"/>
 
 # Running a big data stack on DKP
 
@@ -135,6 +135,8 @@ The technology stack for this deployment is as follows:
 ## Apply our Deployment Objects
 
 1. We have now installed the operators into our kubernetes cluster. These operators allow us to define our deployments through "Custom Resource Definitions". The "deployments" directory in this repo has basic examples of each in order to run the demo. See the table at the top of this document for links to each of the operators. The API documentation for each will allow you to compose more complex manifests to suit your needs when deploying into productions. Here is an example manifest that defines a simple Elastic cluster.
+
+    *Do not apply this manifest; it's just an example!*
 
     ```yaml
     apiVersion: elasticsearch.k8s.elastic.co/v1
