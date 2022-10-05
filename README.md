@@ -53,6 +53,14 @@
 |Rook Ceph Storage|Operator|Rook|1.10.0|[Rook]([Link](https://rook.io/docs/rook/v1.10/Getting-Started/quickstart/))|
 |Streamlit|Helm Chart|Custom|0.1.0|[Streamlit]([Link](https://streamlit.io/))|
 
+
+|Product|Type|Operator|Version|Link|
+|---|---|---|---|---|
+|Apache NiFi|Operator|nifNiFiKopikop|0.14.1|<a href="https://github.com/banzaicloud/koperator">test</a>|
+
+
+
+
 </center>
 <br />
 The technology stack for this deployment is as follows:
