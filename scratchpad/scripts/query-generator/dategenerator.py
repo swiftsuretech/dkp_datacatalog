@@ -1,6 +1,3 @@
-from audioop import reverse
-
-
 with open("./queries.txt", 'w+') as queries:
     for year in range(2023, 2016, -1):
         for month in range(12, 0, -1):
