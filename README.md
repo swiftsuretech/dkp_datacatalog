@@ -8,6 +8,9 @@
 
 - This is the detailed version. Field engineers and experienced DKP users wishing to use the tldr version should see [this guide](docs/catalog-deploy-tldr-version.md).
 - In order to follow along with this tutorial, it is advised that you clone this repository to your local machine.
+- A companion video is available for you to follow along:
+
+[![Watch the video](images/vid.png)](https://drive.google.com/file/d/1M01SVDnrJP2oImi2a0vzzj4DxdDqCC4e/view?usp=sharing)
 
 ### Pre-requisites
 
