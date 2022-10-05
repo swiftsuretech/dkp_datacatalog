@@ -303,4 +303,4 @@ The technology stack for this deployment is as follows:
     ```
 5. Reload the streamlit endpoint and view the application.
 
-<p align="center"><img src="images/streamlit.png" alt="Apps" width="400" /></p>
+<p align="center"><img src="images/streamlit.png" alt="Apps" width="800" /></p>
