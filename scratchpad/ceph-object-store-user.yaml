@@ -1,0 +1,15 @@
+apiVersion: ceph.rook.io/v1
+kind: CephObjectStoreUser
+metadata:
+  name: nifi-user
+  namespace: rook-ceph
+spec:
+  store: my-store
+  displayName: nifi
+  quotas:
+    maxBuckets: 100
+    maxSize: 10G
+    maxObjects: 10000
+  capabilities:
+    user: "*"
+    bucket: "*"
