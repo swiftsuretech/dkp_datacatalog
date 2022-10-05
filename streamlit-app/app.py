@@ -5,14 +5,13 @@ import numpy
 from elasticsearch import Elasticsearch
 import json
 from datetime import datetime
-from IPython.core.display import HTML, Image
 
 # Set envt to test or demo
 envt = ""
 if envt == "test":
     endpoint = "https://a06df877875674d6c8518d5cfe46cbcb-231150320.us-west-2.elb.amazonaws.com:443/elastic/"
 else:
-    endpoint = "https://elastic-es-default:9200"
+    endpoint = "http://elastic-es-default:9200"
 pd.set_option('display.max_columns', None)
 search_query = None
 # Set up the application
