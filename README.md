@@ -46,20 +46,12 @@
 
 |Product|Type|Operator|Version|Link|
 |---|---|---|---|---|
-|Apache NiFi|Operator|nifNiFiKopikop|0.14.1|[NiFiKop]([link](https://konpyutaika.github.io/nifikop/docs/1_concepts/1_start_here))
-|Apache Kafka|Operator|koperator|0.21.2|[koperator]([Link](https://github.com/banzaicloud/koperator))|
-|NiFi Registry|Helm Chart|dysnix|1.1.0|[ArtifactHub]([Link](https://artifacthub.io/packages/helm/dysnix/nifi-registry))|
-|Elasticsearch with Kibana|Operator|ECK|2.4.0|[Elastic ECK]([Link](https://www.elastic.co/blog/introducing-elastic-cloud-on-kubernetes-the-elasticsearch-operator-and-beyond))|
-|Rook Ceph Storage|Operator|Rook|1.10.0|[Rook]([Link](https://rook.io/docs/rook/v1.10/Getting-Started/quickstart/))|
-|Streamlit|Helm Chart|Custom|0.1.0|[Streamlit]([Link](https://streamlit.io/))|
-
-
-|Product|Type|Operator|Version|Link|
-|---|---|---|---|---|
-|Apache NiFi|Operator|nifNiFiKopikop|0.14.1|<a href="https://github.com/banzaicloud/koperator">test</a>|
-
-
-
+|Apache NiFi|Operator|nifNiFiKopikop|0.14.1|<a href="https://konpyutaika.github.io/nifikop/docs/1_concepts/1_start_here">NiFiKop</a>|
+|Apache Kafka|Operator|koperator|0.21.2|<a href="https://github.com/banzaicloud/koperator">Koperator</a>|
+|NiFi Registry|Helm Chart|dysnix|1.1.0|<a href="https://artifacthub.io/packages/helm/dysnix/nifi-registry">ArtifactHub</a>|
+|Elasticsearch with Kibana|Operator|ECK|2.4.0|<a href="https://www.elastic.co/blog/introducing-elastic-cloud-on-kubernetes-the-elasticsearch-operator-and-beyond">Elastic ECK</a>|
+|Rook Ceph Storage|Operator|Rook|1.10.0|<a href="https://rook.io/docs/rook/v1.10/Getting-Started/quickstart">Rook</a>|
+|Streamlit|Helm Chart|Custom|0.1.0|<a href="https://streamlit.io/">Streamlit</a>|
 
 </center>
 <br />
