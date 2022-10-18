@@ -4,7 +4,7 @@ category:
   - Data Pipeline
 type: catalog
 scope:
-  - project
+  - workspace
 overview: |-
   # Overview
   NiFi is designed to automate the flow of data between software systems. Leveraging the concept of Extract, transform, load, it is based on the "NiagaraFiles" software previously developed by the US National Security Agency (NSA), which is also the source of a part of its present name – NiFi. It was open-sourced as a part of NSA's technology transfer program in 2014.

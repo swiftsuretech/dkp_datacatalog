@@ -4,7 +4,7 @@ category:
   - Data Pipeline
 type: catalog
 scope:
-  - project
+  - workspace
 overview: |-
   # Overview
   Apache Kafka is an open-source distributed event streaming platform used by thousands of companies for high-performance Data Pipeline, streaming analytics, data integration, and mission-critical applications.
