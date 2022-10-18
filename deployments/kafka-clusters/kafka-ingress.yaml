@@ -1,0 +1,30 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: stripprefixes-kafka
+  # namespace: kommander
+spec:
+  stripPrefix:
+    prefixes:
+    - /kafka
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: kommander-traefik
+    traefik.ingress.kubernetes.io/router.tls: "true"
+    traefik.ingress.kubernetes.io/router.middlewares: ${releaseNamespace}-stripprefixes-kafka@kubernetescrd #kommander-forwardauth@kubernetescrd
+  name: kafka-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          service:
+            name: kafka-ui
+            port:
+              number: 80
+        path: /kafka
+        pathType: Prefix

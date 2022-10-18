@@ -4,7 +4,7 @@ category:
   - Data Pipeline
 type: catalog
 scope:
-  - workspace
+  - project
 overview: |-
   # Overview
   Apache NiFi Registry provides the following features:
