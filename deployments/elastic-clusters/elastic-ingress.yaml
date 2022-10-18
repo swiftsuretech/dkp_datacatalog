@@ -14,7 +14,7 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: kommander-traefik
     traefik.ingress.kubernetes.io/router.tls: "true"
-    traefik.ingress.kubernetes.io/router.middlewares: ${releaseNamespace}-stripprefixes-elastic@kubernetescrd
+    traefik.ingress.kubernetes.io/router.middlewares: data-demo-stripprefixes-elastic@kubernetescrd
   name: elastic-ingress
 spec:
   rules:
