@@ -11,8 +11,6 @@ kind: CephCluster
 metadata:
   name: rook-ceph
   namespace: rook-ceph # namespace:cluster
-  labels:
-  {{- include "rook.labels" . | nindent 4 }}  
 spec:
   dataDirHostPath: /var/lib/rook
   mon:
