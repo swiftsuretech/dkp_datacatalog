@@ -15,7 +15,7 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: kommander-traefik
     traefik.ingress.kubernetes.io/router.tls: "true"
-    traefik.ingress.kubernetes.io/router.middlewares: data-demo-stripprefixes-kafka@kubernetescrd #kommander-forwardauth@kubernetescrd
+    traefik.ingress.kubernetes.io/router.middlewares: data-project-stripprefixes-kafka@kubernetescrd #kommander-forwardauth@kubernetescrd
   name: kafka-ingress
 spec:
   rules:
