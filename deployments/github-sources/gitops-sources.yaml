@@ -8,7 +8,7 @@ spec:
     path: ./deployments/elastic-clusters
     ref:
       branch: master
-    suspend: true
+    suspend: false
 ---
 apiVersion: dispatch.d2iq.io/v1alpha2
 kind: GitopsRepository
@@ -20,7 +20,7 @@ spec:
     path: ./deployments/elastic-mapping
     ref:
       branch: master
-    suspend: true
+    suspend: false
 ---
 apiVersion: dispatch.d2iq.io/v1alpha2
 kind: GitopsRepository
@@ -32,7 +32,7 @@ spec:
     path: ./deployments/kafka-clusters
     ref:
       branch: master
-    suspend: true
+    suspend: false
 ---
 apiVersion: dispatch.d2iq.io/v1alpha2
 kind: GitopsRepository
@@ -44,7 +44,7 @@ spec:
     path: ./deployments/kafka-topics
     ref:
       branch: master
-    suspend: true
+    suspend: false
 ---
 apiVersion: dispatch.d2iq.io/v1alpha2
 kind: GitopsRepository
@@ -56,7 +56,7 @@ spec:
     path: ./deployments/nifi-clusters
     ref:
       branch: master
-    suspend: true
+    suspend: false
 ---
 apiVersion: dispatch.d2iq.io/v1alpha2
 kind: GitopsRepository
@@ -68,5 +68,5 @@ spec:
     path: ./deployments/ceph-clusters
     ref:
       branch: master
-    suspend: true
+    suspend: false
 ---
