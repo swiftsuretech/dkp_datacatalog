@@ -17,8 +17,8 @@ spec:
   install:
     remediation:
       retries: 30
-    createNamespace: true
+    createNamespace: false
   upgrade:
     remediation:
       retries: 30
-  targetNamespace: rook-ceph
+  targetNamespace: ${releaseNamespace}
