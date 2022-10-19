@@ -3,5 +3,4 @@ kind: Kustomization
 resources:
   - kafka.yaml
   - zookeeper.yaml
-  - kowl.yaml
   - ../../../helm-repositories
