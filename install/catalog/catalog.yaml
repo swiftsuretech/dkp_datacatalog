@@ -32,7 +32,7 @@ roleRef:
   name: data-catalog-cluster
 subjects:
 - kind: ServiceAccount
-  name: data-project
+  name: flux-demo
   namespace: flux-demo
 ---
 apiVersion: rbac.authorization.k8s.io/v1
@@ -55,7 +55,7 @@ metadata:
   namespace: flux-demo
 subjects:
   - kind: ServiceAccount
-    name: data-project
+    name: flux-demo
     namespace: flux-demo
   - kind: ServiceAccount
     name: nifikop
